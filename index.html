@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iSING Lab - TRS Project</title>
+  <meta name="description" content="iSING Lab -- TRS Project">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/trs/">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#4e2a84">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+<!--  -->
+
+</head>
+
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+
+      <a class="navbar-brand" href="/"><img src="/images/logopic/sing-logo-white.png" height=60 class="d-inline-block align-top">
+      </a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="/">Home</a></li>
+		<li><a href="/people">People</a></li>
+		<li><a href="/publications">Publications</a></li>
+		<li><a href="/awards">Awards</a></li>
+		<li><a href="/trs">TRS Project</a></li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="textid" class="col-sm-12">
+  <h2 id="a-high-performance-distributed-machine-learning-framework-for-graph-based-streaming-data-with-smart-city-applications">A High Performance Distributed Machine Learning Framework for Graph-based Streaming Data with Smart City Applications</h2>
+
+<h3 id="rgc-theme-based-research-scheme">RGC Theme-based Research Scheme</h3>
+
+<p class="ex1">
+	<b>PC: </b>
+	<a href="https://www.cse.ust.hk/~kaichen/">Kai Chen</a> (HKUST)
+</p>
+<p class="ex1">
+	<b>Co-PIs: </b>
+	<a href="http://www.cs.ust.hk/~qyang/">Qiang Yang</a> (HKUST), 
+	<a href="https://sites.google.com/view/dyyeung">Dit-Yan Yeung</a> (HKUST), 
+	<a href="https://cehyang.people.ust.hk/">Hai Yang</a> (HKUST), 
+	<a href="https://www4.comp.polyu.edu.hk/~csjcao/">Jiannong Cao</a> (PolyU), 
+	<a href="http://www.cs.ust.hk/~cktang/">Chi-Keung Tang</a> (HKUST), 
+	<a href="http://www.cs.ust.hk/~leichen/">Lei Chen</a> (HKUST), 
+	<a href="http://dahua.me/">Dahua Lin</a> (CUHK)
+</p>
+
+<p class="ex1">
+	<b>Abstract</b>
+</p>
+
+<p style="text-align: justify;">
+Many smart city applications can be modeled as graphs, where nodes represent different entities/locations such as buildings, road intersections, districts, etc., and links consist of roads connecting these nodes. In the big data era, each node or link may involve continuous data streams. Advanced machine learning techniques are instrumental in mining inherent patterns in such dynamic data streams for making predictions. Computational efficiency and prediction accuracy are fundamental requirements for a machine learning framework to effectively support smart city applications such as transportation optimization, urban planning, and crowd sensing. However, none of the existing machine learning frameworks can achieve both computational efficiency and prediction accuracy for a large graph of streaming data. The underlying grand challenges include data scarcity, algorithm limitation, and computing power inefficiency.
+</p>
+
+<p style="text-align: justify;">
+By addressing the above challenges, in this project, we will develop a new machine learning framework for large-scale graph-based streaming data with smart city applications. Specifically, this project will make four main contributions: 
+</p>
+<ol>
+  <li style="text-align: justify;"><em>A new deep learning methodology for graph-based streaming data</em>: existing deep learning algorithms such as CNNs (convolutional neural networks) are mostly designed for regular structures such as image grids, which are ineffective for irregular graphs with highly dynamic data streams. We will design new deep learning algorithms to effectively learn from irregular city graphs with streaming data.</li>
+  <li style="text-align: justify;"><em>A new transfer learning framework for inter-city knowledge sharing</em>: since Hong Kong is lacking the necessary data in large volumes, we will develop inter-city transfer learning algorithms to transfer knowledge learned from other cities with rich data sources to our Hong Kong model. As no two cities are the same, transferable and non-transferable knowledge must be identified and separated. To this end, we will propose new domain adaptation and adversarial neural network techniques.</li>
+  <li style="text-align: justify;"><em>A high-performance distributed AI computing architecture</em> to support the above deep learning and transfer learning over large graph streaming data. In particular, efficient RDMA (remote direct memory access) technique will be adopted to achieve high-throughput, low-latency communications among computing nodes in large AI clusters in order to improve the overall cluster computing efficiency.</li>
+  <li style="text-align: justify;"><em>In collaboration with the Hong Kong Transport Department and the Hong Kong Observatory, we will apply the proposed machine learning framework to optimize the transportation system for Hong Kong. In particular, we will first implement an AI-driven taxi dispatching system</em> for Hong Kong based on the taxi scheduling data we have collected. Then, with the first milestone, we will expand our machine learning platform to optimize for the entire transportation network in Hong Kong, including the buses, MTR, ferries, and so on.</li>
+</ol>
+
+<p><a href="/trs_cht">Chinese version/中文版</a></p>
+
+<p align="center">
+  	<img width="70%" src="/images/rgcpic/tasks.png" />
+</p>
+
+<p><em>More updates to come.</em></p>
+
+<h3 id="link">Link:</h3>
+<p><a href="https://www.smartcity.gov.hk/doc/HongKongSmartCityBlueprint(EN).pdf">Hong Kong Smart City Blueprint</a></p>
+
+</div>
+
+      </div>
+    </div>
+
+    <div id="footer" class="panel">
+  <div class="panel-footer">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-sm-8">
+			
+			<p>&copy 2020 iSING Lab.<br>
+			Maintained by <a href="https://www.cse.ust.hk/~ywanggf/">Yiding Wang</a>.<br>
+			<img src="/images/logopic/sing-logo-new.png" style="height: 70px; margin:0;">
+			</p>
+            
+		</div>
+		<div class="col-sm-4">
+
+
+		</div>
+		<div class="col-sm-4">
+		  Contact:<br />
+		  Office 3661, HKUST<br />
+		  Clear Water Bay<br />
+		  Kowloon<br />
+		  Hong Kong<br />
+          (<a href="https://goo.gl/maps/JSzS3dAGpZitvJtA6">Maps</a>, <a href="https://pathadvisor.ust.hk/from/to/ROOM%203661;ntu1WOsrC8s-;3;3304,90/floor/3/at/normalized/2583,90,3">Directions</a>)
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
