@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>iSING Lab - TRS Project</title>
-  <meta name="description" content="iSING Lab -- TRS Project">
-  <link rel="stylesheet" href="/css/main.css">
+  <title>TRS Smart City Project</title>
+  <meta name="description" content="TRS Smart City Project">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="canonical" href="/trs/">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -24,22 +24,128 @@
 </head>
 
 
-  <body>
+<body>
+
+<style>
+
+	/* Top navigation bar */
+	.navbar { min-height: 100px; background-color: #4E2A84; }
+
+	.navbar-brand { padding: 0 15px; height: 100px; line-height: 100px; }
+
+	.navbar-toggle { margin-top: 33px; padding: 9px 10px !important; }
+
+	.nav.navbar-nav.navbar-right li a { color: #B6ACD1; padding-top: 32px; padding-bottom: 32px; padding-left: 25px; line-height: 36px; font-size: 23px; font-weight: 400; }
+
+	.nav.navbar-nav.navbar-right li a:hover { color: #ffffff; }
+
+	p.byline { text-align: center; font-size: 18px; line-height: 36px; margin-top: -24px; margin-bottom: 48px; }
+
+	.navbar .container-fluid { margin-right: auto; margin-left: auto; max-width: 1000px; /* or 950px */ }
+
+	.container-fluid {
+		justify-content: center;
+	}
+	.section {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		background-color: #FAFAFA;
+		min-height: 400px;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	.section-header {
+		background-image: url("images/0.svg");
+		background-size: cover;
+	}
+	.row {
+		max-width: 960px;
+		width: 100%;
+		justify-content: center;
+	}
+	.site-title {
+		text-align: center;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	.site-subtitle {
+		text-align: center;
+		font-size: 1.25rem
+	}
+	.section-goals {
+		text-align: left;
+		margin-top: 3rem;
+		width: 90%;
+		color: #4F2A84;
+		display: flex;
+		justify-content: center;
+	}
+	.goals:first-child {
+		margin-right: 5rem;
+	}
+	.section-goals .title {
+		font-weight: bold;
+		font-size: 1.2rem;
+		margin-bottom: .5rem;
+	}
+	.section-content:nth-child(even) {
+		background-color: white;
+	}
+	.section-content .title {
+		font-weight: bold;
+		font-size: 1.5rem;
+		justify-content: center;
+		text-align: center;
+		margin-bottom: .5rem;
+	}
+	.section-content .content {
+		margin-top: 2rem;
+		align-items: center;
+	}	
+	.section-content .content .image {
+		text-align: center;
+	}	
+	.section-content .content img {
+		width: 80%;
+	}
+	.name {
+		margin-bottom: 0;
+	}
+	.role {
+		color: #888;
+		font-size: 0.9rem;
+	}
+	.feature img {
+		width: 50%!important;
+	}	
+	.feature .role {
+		margin-top: .5rem;
+	}
+	.section-meetings .content {
+		margin-top: 1rem !important;
+	}
+	.section-meetings {
+		height: 300px;
+		min-height: 300px;
+	}	
+	.section-footer {
+		height: 100px;
+		min-height: 100px;
+	}	
+	.section-footer .title {
+		font-size: 1rem;
+	}
+</style>
+
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
 	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-
-      <a class="navbar-brand" href="/"><img src="/images/logopic/sing-logo-white.png" height=60 class="d-inline-block align-top">
-      </a>
+      <img src="/images/logopic/sing-logo-white.png" height=60 class="d-inline-block align-top">
 	</div>
-	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	<div class="collapse navbar-collapse">
 	  <ul class="nav navbar-nav navbar-right">
 		<li><a href="/">Home</a></li>
 		<li><a href="/people">People</a></li>
@@ -52,93 +158,265 @@
 </div>
 
 
-    <div class="container-fluid">
-      <div class="row">
-        <div id="textid" class="col-sm-12">
-  <h2 id="a-high-performance-distributed-machine-learning-framework-for-graph-based-streaming-data-with-smart-city-applications">A High Performance Distributed Machine Learning Framework for Graph-based Streaming Data with Smart City Applications</h2>
 
-<h3 id="rgc-theme-based-research-scheme">RGC Theme-based Research Scheme</h3>
-
-<p class="ex1">
-	<b>PC: </b>
-	<a href="https://www.cse.ust.hk/~kaichen/">Kai Chen</a> (HKUST)
-</p>
-<p class="ex1">
-	<b>Co-PIs: </b>
-	<a href="http://www.cs.ust.hk/~qyang/">Qiang Yang</a> (HKUST), 
-	<a href="https://sites.google.com/view/dyyeung">Dit-Yan Yeung</a> (HKUST), 
-	<a href="https://cehyang.people.ust.hk/">Hai Yang</a> (HKUST), 
-	<a href="https://www4.comp.polyu.edu.hk/~csjcao/">Jiannong Cao</a> (PolyU), 
-	<a href="http://www.cs.ust.hk/~cktang/">Chi-Keung Tang</a> (HKUST), 
-	<a href="http://www.cs.ust.hk/~leichen/">Lei Chen</a> (HKUST), 
-	<a href="http://dahua.me/">Dahua Lin</a> (CUHK)
-</p>
-
-<p class="ex1">
-	<b>Abstract</b>
-</p>
-
-<p style="text-align: justify;">
-Many smart city applications can be modeled as graphs, where nodes represent different entities/locations such as buildings, road intersections, districts, etc., and links consist of roads connecting these nodes. In the big data era, each node or link may involve continuous data streams. Advanced machine learning techniques are instrumental in mining inherent patterns in such dynamic data streams for making predictions. Computational efficiency and prediction accuracy are fundamental requirements for a machine learning framework to effectively support smart city applications such as transportation optimization, urban planning, and crowd sensing. However, none of the existing machine learning frameworks can achieve both computational efficiency and prediction accuracy for a large graph of streaming data. The underlying grand challenges include data scarcity, algorithm limitation, and computing power inefficiency.
-</p>
-
-<p style="text-align: justify;">
-By addressing the above challenges, in this project, we will develop a new machine learning framework for large-scale graph-based streaming data with smart city applications. Specifically, this project will make four main contributions: 
-</p>
-<ol>
-  <li style="text-align: justify;"><em>A new deep learning methodology for graph-based streaming data</em>: existing deep learning algorithms such as CNNs (convolutional neural networks) are mostly designed for regular structures such as image grids, which are ineffective for irregular graphs with highly dynamic data streams. We will design new deep learning algorithms to effectively learn from irregular city graphs with streaming data.</li>
-  <li style="text-align: justify;"><em>A new transfer learning framework for inter-city knowledge sharing</em>: since Hong Kong is lacking the necessary data in large volumes, we will develop inter-city transfer learning algorithms to transfer knowledge learned from other cities with rich data sources to our Hong Kong model. As no two cities are the same, transferable and non-transferable knowledge must be identified and separated. To this end, we will propose new domain adaptation and adversarial neural network techniques.</li>
-  <li style="text-align: justify;"><em>A high-performance distributed AI computing architecture</em> to support the above deep learning and transfer learning over large graph streaming data. In particular, efficient RDMA (remote direct memory access) technique will be adopted to achieve high-throughput, low-latency communications among computing nodes in large AI clusters in order to improve the overall cluster computing efficiency.</li>
-  <li style="text-align: justify;"><em>In collaboration with the Hong Kong Transport Department and the Hong Kong Observatory, we will apply the proposed machine learning framework to optimize the transportation system for Hong Kong. In particular, we will first implement an AI-driven taxi dispatching system</em> for Hong Kong based on the taxi scheduling data we have collected. Then, with the first milestone, we will expand our machine learning platform to optimize for the entire transportation network in Hong Kong, including the buses, MTR, ferries, and so on.</li>
-</ol>
-
-<p><a href="/trs_cht">Chinese version/中文版</a></p>
-
-<p align="center">
-  	<img width="70%" src="/images/rgcpic/tasks.png" />
-</p>
-
-<p><em>More updates to come.</em></p>
-
-<h3 id="link">Link:</h3>
-<p><a href="https://www.smartcity.gov.hk/doc/HongKongSmartCityBlueprint(EN).pdf">Hong Kong Smart City Blueprint</a></p>
-
-</div>
-
-      </div>
-    </div>
-
-    <div id="footer" class="panel">
-  <div class="panel-footer">
-	<div class="container-fluid">
-	  <div class="row">
-		<div class="col-sm-8">
-			
-			<p>&copy 2020 iSING Lab.<br>
-			Maintained by <a href="https://www.cse.ust.hk/~ywanggf/">Yiding Wang</a>.<br>
-			<img src="/images/logopic/sing-logo-new.png" style="height: 70px; margin:0;">
-			</p>
-            
+<div class="container-fluid">
+	<div class="section section-header">
+		<div class="row section-titles">
+			<div class="col">
+				<div class="site-title">Building the Next-Generation AI Hub for Smarter Hong Kong</div>
+				<div class="site-subtitle">RGC Theme-based Research Scheme-funded Project</div>
+			</div>
 		</div>
-		<div class="col-sm-4">
-
-
+		<div class="section-goals">
+			<div class="goals">
+				<div class="title">Empower HK Smart City Development</div>
+				<div class="content">
+					<div>· Government Policy Studies</div>
+					<div>· Hong Kong and Global AI Reserach</div>
+					<div>· Other Empirical Studies</div>
+				</div>
+			</div>			
+			<div class="goals">
+				<div class="title">Make Impact on AI Research</div>
+				<div class="content">
+					<div>· Transportation and Civil Engineering</div>
+					<div>· Public Health, Social Welfare</div>
+					<div>· Macroeconomics, Finance</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-sm-4">
-		  Contact:<br />
-		  Office 3661, HKUST<br />
-		  Clear Water Bay<br />
-		  Kowloon<br />
-		  Hong Kong<br />
-          (<a href="https://goo.gl/maps/JSzS3dAGpZitvJtA6">Maps</a>, <a href="https://pathadvisor.ust.hk/from/to/ROOM%203661;ntu1WOsrC8s-;3;3304,90/floor/3/at/normalized/2583,90,3">Directions</a>)
-		</div>
-	  </div>
 	</div>
-  </div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+	<div class="section section-content">
+		<div class="row title">
+			<div class="col">
+				<div class="title-text">High Performance and Privacy-preserving AI Cloud</div>
+			</div>
+		</div>
+		<div class="row content">
+			<div class="col-sm-6 image">
+				<img src="images/1.svg" /> 
+			</div>			
+			<div class="col-sm-6">
+				<div class="content">
+					<p>We envision the next-generation AI computing hub to empower stakeholders to participate in data collaboration through a high-performance, privacy-friendly computing platform.</p>
+					<p>We are building an open platform that provides massive smart city data, state-of-the-art algorithm paradigms and high performance computing resources for researchers in the cross-disciplinary of machine learning, data science, civil and environmental engineering and public policy. The platform will power smart city applications, starting with but not only Hong Kong.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-content">
+		<div class="row title">
+			<div class="col">
+				<div class="title-text">Scalable AI Infrastcture for Large Machine Learning Tasks</div>
+			</div>
+		</div>
+		<div class="row content">		
+			<div class="col-sm-6">
+				<div class="content">
+					<p>·  High Performance Cluster with CPU/GPU/FPGA </p>
+					<p>·  Privacy-preserving AI & Acceleration </p>
+					<p>·  Serverless Computing Cluster Management </p>
+					<p>·  Reliable Massive Data Storage </p>
+				</div>
+			</div>
+			<div class="col-sm-6 image">
+				<img src="images/2.png" /> 
+			</div>	
+		</div>
+	</div>
+
+	<div class="section section-content">
+		<div class="row title">
+			<div class="col">
+				<div class="title-text">Versatile Dataset for a Comprehensive View of Hong Kong</div>
+			</div>
+		</div>
+		<div class="row content">		
+			<div class="col-sm-6 image">
+				<img src="images/3.svg" /> 
+			</div>	
+			<div class="col-sm-6">
+				<div class="content">
+					<p>CityNet aims to promote a smarter Hong Kong by fueling all possible smart city applications with heterogeneous data from different sources.</p>
+					<p>CityNet consists of multi-modality data collected from both the government and companies in Hong Kong, including POI (point of interest), CCTV camera recordings and images on streets, transportation status for different methods (bus, taxi, car), weather information, and user comments and opinions collected through social media, etc. Machine learning models can utilize these streaming graphs from different aspects together to mine more interesting patterns and make better predictions.</p>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<div class="section section-content">
+		<div class="row content feature">		
+			<div class="col-6 col-md-3 col-lg-3">
+				<div class="content" style="text-align:center">
+					<p><img src="images/4-1.svg" />
+					<p class="name">CityNet</p>
+					<p class="role">Open Database for Smart City Research</p>
+				</div>
+			</div>					
+			<div class="col-6 col-md-3 col-lg-3">
+				<div class="content" style="text-align:center">
+					<p><img src="images/4-2.svg" />
+					<p class="name">Paradigms</p>
+					<p class="role">GNN, Transfer Learning and Federated Learning</p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3 col-lg-3">
+				<div class="content" style="text-align:center">
+					<p><img src="images/4-3.svg" />
+					<p class="name">Data Science</p>
+					<p class="role">Data Science and Statistic Methods</p>
+				</div>
+			</div>
+			<div class="col-6 col-md-3 col-lg-3">
+				<div class="content" style="text-align:center">
+					<p><img src="images/4-4.svg" />
+					<p class="name">Big Data</p>
+					<p class="role">Streaming Data Processing / Storage</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-content">
+		<div class="row title">
+			<div class="col">
+				<div class="title-text">Build a Better Hong Kong with Smart City Applications</div>
+			</div>
+		</div>
+		<div class="row content">		
+			<div class="col-sm-6">
+				<div class="content">
+					<p>The tremendous volume of multimodal spatiotemporal graph data available from different cities in CityNet presents unprecedented research challenges but also opportunities for new applications in smart urban computing. From smart travel guides to taxi scheduling for better traffic utilization, CityNet will be the key to enabling various important smart city applications, including smart economy, smart mobility and smart living. </p>
+					<p>Take smart mobility as an example, based on the computation power of our TACC platform and CityNet, we will implement an AI-enhanced taxi dispatching system. By transferring knowledge gained from mainland cities where our industry partners, e.g., DiDi and SenseTime, have rich data sources to Hong Kong, and combined with the Hong Kong local data from the Transport Department and HKO, our framework will effectively improve the transportation system capacity in this busy city.</p>
+				</div>
+			</div>
+			<div class="col-sm-6 image">
+				<img src="images/5.png" /> 
+			</div>	
+		</div>
+	</div>
+
+	<div class="section section-content">
+		<div class="row title">
+			<div class="col">
+				<div class="title-text">Project Group</div>
+			</div>
+		</div>
+		<div class="row content">		
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>					
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-3 col-lg-2">
+				<div class="content" style="text-align:center">
+					<p><img src="images/group/a.png" />
+					<p class="name">Li Dan</p>
+					<p class="role">PhD Student</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-content section-meetings">
+		<div class="row title">
+			<div class="col">
+				<div class="title-text">Group Meetings</div>
+			</div>
+		</div>
+		<div class="row content">		
+			<div class="col-12">
+				<div class="content" style="text-align:center">
+					<p><a href="#" style="text-decoration:none">Click here to view all group meetings in the past</a></p>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<div class="section section-content section-footer">
+		<div class="row title">
+			<div class="col">
+				<div>RGC Theme-based Research Scheme-funded Project</div>
+			</div>
+		</div>
+	</div>
+
+
+</div> 
 
   </body>
 
