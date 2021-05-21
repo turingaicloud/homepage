@@ -1,0 +1,279 @@
+
+    <html>
+      <head>
+        <title>README</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      </head>
+      <body>
+        <div id='content'>
+    <h1 id="turing-ai-cloud-quick-start">Turing AI Cloud Quick Start</h1>
+<h2 id="workflow-overview">Workflow Overview</h2>
+<p><img src="https://github.com/turingaicloud/quickstart/raw/master/static/workflow.png" alt="Workflow" /></p>
+<p>The above picture illustrates TACC job submitting and debugging workflow.</p>
+<h2 id="upload-ssh-public-key-to-tacc">Upload SSH public key to TACC</h2>
+<p>Before using tcloud SDK, please make sure that you have submitted your public key to TACC. You may generate SSH public key according to the <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key">steps</a>.</p>
+<h2 id="downloadinstall-tcloud-sdk">Download/Install tcloud SDK</h2>
+<ul>
+<li><strong>Download tcloud SDK</strong> \<br />
+Download the latest tcloud SDK from <a href="https://github.com/turingaicloud/quickstart/tags">tags</a>.</li>
+<li><strong>Install tcloud SDK</strong> \<br />
+Place <code>setup.sh</code> and <code>tcloud</code> in the same directory, and run <code>setup.sh</code>.</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<h3 id="cli-configuration">CLI Configuration</h3>
+<ol>
+<li>Before using the tcloud CLI and submit ML jobs to TACC, you need to configure your TACC credentials. You can do this by running the <code>tcloud config</code> command:</li>
+</ol>
+<pre><code>$ tcloud config [-u/--username] MYUSERNAME
+$ tcloud config [-f/--file] MYPRIVATEFILEPATH
+</code></pre>
+<ol start="2">
+<li>You need to run <code>tcloud init</code> command to obtain the latest cluster hardware information from TACC cluster.</li>
+</ol>
+<h3 id="job-configuration">Job Configuration</h3>
+<h4 id="tuxivconf">TUXIV.CONF</h4>
+<p>You can use <code>tcloud init</code> to pull the latest cluster configurations from remote. There are four parts in <code>tuxiv.conf</code>, config different parts of job submission. Noted that <code>tuxiv.conf</code> follows the yaml format.</p>
+<ul>
+<li><p>Entrypoint</p>
+<p>In this section, you should insert you shell commands to run your code line-by-line. The tcloud CLI will run the job as your configurations.</p></li>
+</ul>
+<pre><code class="yaml language-yaml">  entrypoint:
+      - python ${TACC_WORKDIR}/mnist.py --epoch=3 
+</code></pre>
+<ul>
+<li><p>Environment</p>
+<p>In this section, you can specify your conda configurations for virtual environment used in the cluster, including environment name, dependencies, source channels and so on.</p></li>
+</ul>
+<pre><code class="yaml language-yaml">  environment:
+      name: torch-env
+      dependencies:
+          - pytorch=1.6.0
+          - torchvision=0.7.0
+      channels: pytorch
+</code></pre>
+<ul>
+<li><p>Job</p>
+<p>In this section, you can specify your slurm configurations for slurm cluster resources, including number of nodes, CPUs, GPUs, output file and so on. All the slurm cluster configuration should be set in the general part.</p></li>
+</ul>
+<pre><code class="yaml language-yaml">  job:
+      name: test
+      general:
+          - nodes=2
+          - output=${TACC_SLURM_USERLOG}/output.log
+</code></pre>
+<ul>
+<li><p>Datasets</p>
+<p>In this section, you can specify the needed CityNet dataset name, and tcloud will help place the dataset access in <code>TACC_USERDIR</code>. You can view the table of CityNet datasets at <a href="https://docs.google.com/spreadsheets/d/18qi2YpYvuXkWns7KY9pHYQclhS1Yyt5ysqgZ4plYcTg/edit#gid=0">CityNet Dataset Info</a>.</p></li>
+</ul>
+<pre><code class="yaml language-yaml">  datasets:
+    - OpenRoadMap
+</code></pre>
+<h2 id="tacc-variables">TACC VARIABLES</h2>
+<ul>
+<li><code>TACC_WORKDIR</code>: TACC job workspace directory, each job has a different workspace directory.</li>
+<li><code>TACC_USERDIR</code>: TACC User directory.</li>
+<li><code>TACC_SLURM_USERLOG</code>: Slurm log directory, the default value is <code>${TACC_USERDIR}/slurm_log</code>.</li>
+</ul>
+<h2 id="job-monitoring">Job Monitoring</h2>
+<p>In this section, we provide two different methods to monitoring a job log and other outputs.</p>
+<ul>
+<li><p>Download</p>
+<p>You can either save your output file in the <code>USERDIR</code> or copy your output file to the <code>USERDIR</code> in your own code. After training you can use <code>tcloud ls [filepath]</code> to find the output file and use <code>tcloud download [filepath]</code>. Noted that you can only read and download the file in the <code>USERDIR</code>, and the file in <code>WORKDIR</code> may be remove after the job is terminated.</p></li>
+<li><p>Run application services</p>
+<p>Here we give an example of application service, using tensorboard to monitor the job. </p></li>
+</ul>
+<pre><code class="shell language-shell">  ssh -p 30041 -L 10006:127.0.0.1:10006  username@sing.cse.ust.hk /mnt/sharefs/home/username/.Miniconda3/envs/torch-env/bin/tensorboard --logdir=/mnt/sharefs/home/username/WORKDIR/PyTorch/runs --port=10006
+</code></pre>
+<h2 id="demo-video">Demo video</h2>
+<p>You can find the demo video at <a href="https://drive.google.com/file/d/1eEZzgH3MipdXy3eIfgasUaMdlMquCqf8/view?usp=sharing">demo video</a> and conda-cache videon at <a href="https://drive.google.com/file/d/1hfFfWZoJj6dlNiOK-dbyvrE_VmM07w7A/view?usp=sharing">conda-cache video</a>.</p>
+<h2 id="examples">Examples</h2>
+<p>Basic examples are provided under the <a href="example">example</a> folder. These examples include: <a href="example/helloworld">HelloWorld</a>, <a href="example/TensorFlow">TensorFlow</a>, <a href="example/PyTorch">PyTorch</a> and <a href="example/MXNet">MXNet</a>.</p>
+
+        </div>
+        <style type='text/css'>body {
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  body > #content {
+    padding: 0px 20px 20px 20px !important;
+  }
+}
+
+body > #content {
+  margin: 0px;
+  max-width: 900px;
+  border: 1px solid #e1e4e8;
+  padding: 10px 40px;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  color: #bbb;
+  background-color: #bbb;
+  height: 1px;
+  flex: 0 1 auto;
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #0366d6;
+  text-decoration: none; }
+  a:visited {
+    color: #0366d6; }
+  a:hover {
+    color: #0366d6;
+    text-decoration: underline; }
+
+pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+/**
+  * Code blocks
+  */
+
+code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  word-wrap: break-word;
+  padding: .2em .4em;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+pre > code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+  font-size: 100%;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  border-left-width: 3px;
+  padding: 0 1em;
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+blockquote * {
+  font-style: normal !important;
+  letter-spacing: 0;
+  color: #6a737d !important;
+}
+
+/**
+ * Tables
+ */
+table {
+  border-spacing: 2px;
+  display: block;
+  font-size: 14px;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  font-weight: 600;
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/**
+ * Others
+ */
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #24292e; }
+
+ul {
+  margin-top: 0; }
+
+li {
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; }
+
+li + li {
+  margin-top: 0.25em; }
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #24292e; }
+
+a:visited {
+  color: #0366d6; }
+
+h1, h2, h3 {
+  border-bottom: 1px solid #eaecef;
+  color: #111;
+  /* Darker */ }</style>
+      </body>
+    </html>

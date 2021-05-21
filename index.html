@@ -1,155 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Smart City TRS Project</title>
-  <meta name="description" content="TRS Smart City Project">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="shortcut icon" href="/images/favicon.ico">
-
-<!--  -->
-
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smart City TRS Project</title>
+	<meta name="description" content="TRS Smart City Project">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link href="./style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="shortcut icon" href="/images/favicon.ico">
 </head>
-
-
 <body>
 
-<style>
-
-	/* Top navigation bar */
-	.navbar { min-height: 100px; background-color: #4E2A84; }
-
-	.navbar-brand { padding: 0 15px; height: 100px; line-height: 100px; }
-
-	.navbar-toggle { margin-top: 33px; padding: 9px 10px !important; }
-
-	.nav.navbar-nav.navbar-right li a { color: #B6ACD1; padding-top: 32px; padding-bottom: 32px; padding-left: 25px; line-height: 36px; font-size: 23px; font-weight: 400; }
-
-	.nav.navbar-nav.navbar-right li a:hover { color: #ffffff; }
-
-	p.byline { text-align: center; font-size: 18px; line-height: 36px; margin-top: -24px; margin-bottom: 48px; }
-
-	.navbar .container-fluid { margin-right: auto; margin-left: auto; max-width: 1000px; /* or 950px */ }
-
-	.container-fluid {
-		justify-content: center;
-	}
-	.section {
-		font-family: 'Source Sans Pro', sans-serif;
-	    -webkit-font-smoothing: antialiased;
-	    text-rendering: optimizeLegibility;
-	    text-size-adjust: 100%;
-		font-weight: 400;
-		font-size: 18px;
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		background-color: #FAFAFA;
-		min-height: 400px;
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-	}
-	.section-header {
-		background-image: url("images/0.svg");
-		background-size: cover;
-	}
-	.row {
-		max-width: 960px;
-		width: 100%;
-		justify-content: center;
-	}
-	.site-title {
-		text-align: center;
-		font-size: 2.25rem;
-		font-weight: bold;
-	}
-	.site-subtitle {
-		text-align: center;
-		font-size: 1.25rem
-	}
-	.section-goals {
-		text-align: left;
-		margin-top: 3rem;
-		width: 90%;
-		color: #4F2A84;
-		display: flex;
-		justify-content: center;
-	}
-	.goals:first-child {
-		margin-right: 5rem;
-	}
-	.section-goals .title {
-		font-weight: bold;
-		font-size: 1.2rem;
-		margin-bottom: .5rem;
-	}
-	.section-content:nth-child(even) {
-		background-color: white;
-	}
-	.section-content .title {
-		font-weight: bold;
-		font-size: 1.7rem;
-		justify-content: center;
-		text-align: center;
-		margin-bottom: .5rem;
-	}
-	.section-content .content {
-		margin-top: 2rem;
-		align-items: center;
-	}	
-	.section-content .content .image {
-		text-align: center;
-	}	
-	.section-content .content img {
-		width: 80%;
-	}
-	.name {
-		margin-bottom: 0;
-	}
-	.role {
-		color: #777;
-		font-size: 0.95rem;
-	}
-	.feature img {
-		width: 50%!important;
-	}	
-	.feature .role {
-		margin-top: .5rem;
-	}
-	.section-meetings .content {
-		margin-top: 1rem !important;
-	}
-	.section-meetings {
-		height: 300px;
-		min-height: 300px;
-	}	
-	.section-footer {
-		height: 100px;
-		min-height: 100px;
-	}	
-	.section-footer .title {
-		font-size: 1rem;
-	}
-	.group img {
-		border-radius: 50%;
-	}
-</style>
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-	<div class="navbar-header">
-      <img src="images/logo.png" height=60 class="d-inline-block align-top">
+<div class="menu-container" role="navigation">
+	<div class="menu d-flex">
+		<div class="logo p-2">
+			<img src="/images/logo.png" height=60 class="d-inline-block align-top">
+		</div>  
+		<div class="menu-item p-2"><a href="/index.html">Overview</a></div>
+		<div class="menu-item p-2"><a href="/people.html">People</a></div>
+		<div class="menu-item p-2"><a href="/tacc.html">Use TACC</a></div>
 	</div>
-  </div>
 </div>
-
-
 
 <div class="container-fluid">
 	<div class="section section-header">
@@ -167,7 +43,7 @@
 					<div>· Hong Kong and Global AI Research</div>
 					<div>· Other Empirical Studies</div>
 				</div>
-			</div>			
+			</div>      
 			<div class="goals">
 				<div class="title">Make Impact on AI Research</div>
 				<div class="content">
@@ -188,7 +64,7 @@
 		<div class="row content">
 			<div class="col-sm-6 image">
 				<img src="images/1.svg" /> 
-			</div>			
+			</div>      
 			<div class="col-sm-6">
 				<div class="content">
 					<p>We envision the next-generation AI computing hub to empower stakeholders to participate in data collaboration through a high-performance, privacy-friendly computing platform.</p>
@@ -204,7 +80,7 @@
 				<div class="title-text">Scalable AI Infrastcture for Large Machine Learning Tasks</div>
 			</div>
 		</div>
-		<div class="row content">		
+		<div class="row content">   
 			<div class="col-sm-6">
 				<div class="content">
 					<p>We are building a scalable AI infrastructure that is designed for the evolving machine learning researches, including Graph Neural Network and Federated Learning:</p>
@@ -218,7 +94,7 @@
 			</div>
 			<div class="col-sm-6 image">
 				<img src="images/2.png" /> 
-			</div>	
+			</div>  
 		</div>
 	</div>
 
@@ -228,10 +104,10 @@
 				<div class="title-text">Versatile Dataset for a Comprehensive View of Hong Kong</div>
 			</div>
 		</div>
-		<div class="row content">		
+		<div class="row content">   
 			<div class="col-sm-6 image">
 				<img src="images/3.svg" /> 
-			</div>	
+			</div>  
 			<div class="col-sm-6">
 				<div class="content">
 					<p>CityNet aims to promote a smarter Hong Kong by fueling all possible smart city applications with heterogeneous data from different sources.</p>
@@ -239,17 +115,17 @@
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>  
 
 	<div class="section section-content">
-		<div class="row content feature">		
+		<div class="row content feature">   
 			<div class="col-6 col-md-3 col-lg-3">
 				<div class="content" style="text-align:center">
 					<p><img src="images/4-1.svg" />
 					<p class="name">CityNet</p>
 					<p class="role">Open Database <br> for Smart City Research</p>
 				</div>
-			</div>					
+			</div>          
 			<div class="col-6 col-md-3 col-lg-3">
 				<div class="content" style="text-align:center">
 					<p><img src="images/4-2.svg" />
@@ -280,7 +156,7 @@
 				<div class="title-text">Build a Better Hong Kong with Smart City Applications</div>
 			</div>
 		</div>
-		<div class="row content">		
+		<div class="row content">   
 			<div class="col-sm-6">
 				<div class="content">
 					<p>From smart travel guides to taxi scheduling for better traffic utilization, CityNet will be the key to enabling various important smart city applications, including smart economy, smart mobility and smart living.</p>
@@ -289,253 +165,10 @@
 			</div>
 			<div class="col-sm-6 image">
 				<img src="images/5.png" /> 
-			</div>	
+			</div>  
 		</div>
 	</div>
 
-	<div class="section section-content group">
-		<div class="row title">
-			<div class="col">
-				<div class="title-text">Project Group</div>
-			</div>
-		</div>
-		<div class="row content">		
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="http://www.cse.ust.hk/~kaichen/" target="_blank"><img src="images/group/kaichen.jpg" /></a></p>
-					<p class="name">Kai Chen</p>
-					<p class="role">Project Coordinator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="http://www.cse.ust.hk/~qyang/" target="_blank"><img src="images/group/qiangyang.jpg" /></a></p>
-					<p class="name">Qiang Yang</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="https://sites.google.com/view/dyyeung" target="_blank"><img src="images/group/dyyeung.jpg" /></a></p>
-					<p class="name">D.Y. Yeung</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="http://cehyang.people.ust.hk/" target="_blank"><img src="images/group/haiyang.jpg" /></a></p>
-					<p class="name">Hai Yang</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="https://www4.comp.polyu.edu.hk/~csjcao/" target="_blank"><img src="images/group/jiannongcao.jpg" /></a></p>
-					<p class="name">Jiannong Cao</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="http://www.cs.ust.hk/~cktang/bio-sketch-review.htm" target="_blank"><img src="images/group/cktang.jpg" /></a></p>
-					<p class="name">C.K. Tang</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="http://www.cs.ust.hk/~leichen/" target="_blank"><img src="images/group/leichen.jpg" /></a></p>
-					<p class="name">Lei Chen</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-3">
-				<div class="content" style="text-align:center">
-					<p><a href="http://dahua.site/" target="_blank"><img src="images/group/dahualin.png" /></a></p>
-					<p class="name">Dahua Lin</p>
-					<p class="role">Co-Principal Investigator</p>
-				</div>
-			</div>
-		</div>
-		<div class="row content">
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/peiboduan.jpg" /></p>
-					<p class="name">Peibo Duan</p>
-					<p class="role">Associate Professor<br>NEU</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/kunguo.jpg" /></p>
-					<p class="name">Kun Guo</p>
-					<p class="role">Associate Professor<br>FZU</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/leyewang.png" /></p>
-					<p class="name">Leye Wang</p>
-					<p class="role">Assistant Professor<br>PKU</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/hantian.png" /></p>
-					<p class="name">Han Tian</p>
-					<p class="role">Ph.D. Candidate<br>2017</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/kaiqiangxu.jpg" /></p></p>
-					<p class="name">Kaiqiang Xu</p>
-					<p class="role">Ph.D. Student<br>2020</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/yuyang.png" /></p>
-					<p class="name">Yu Yang</p>
-					<p class="role">Ph.D. Candidate<br>2016</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/xugeng.jpg" /></p>
-					<p class="name">Xu Geng</p>
-					<p class="role">Ph.D. Candidate<br>2017</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/yidingwang.jpg" /></p>
-					<p class="name">Yiding Wang</p>
-					<p class="role">Ph.D. Candidate<br>2017</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/xinchenwan.jpg" /></p>
-					<p class="name">Xinchen Wan</p>
-					<p class="role">Ph.D. Candidate<br>2018</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/zhengfeizheng.jpg" /></p>
-					<p class="name">Zhengfei Zheng</p>
-					<p class="role">Ph.D. Candidate<br>2018</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/yilunjin.png" /></p>
-					<p class="name">Yilun Jin</p>
-					<p class="role">Ph.D. Student<br>2019</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/haowang.png" /></p>
-					<p class="name">Hao Wang</p>
-					<p class="role">Ph.D. Student<br>2019</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/xudongliao.jpg" /></p>
-					<p class="name">Xudong Liao</p>
-					<p class="role">Ph.D. Student<br>2020</p>
-				</div>
-			</div>	
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/zhenghangren.jpg" /></p>
-					<p class="name">Zhenghang Ren</p>
-					<p class="role">Ph.D. Student<br>2020</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/yuhangcao.jpg" /></p>
-					<p class="name">Yuhang Cao</p>
-					<p class="role">Ph.D Student<br>2020</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/zengyanggong.jpg" /></p>
-					<p class="name">Zengyang Gong</p>
-					<p class="role">Ph.D Student<br>2020</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/jiahangchen.jpg" /></p>
-					<p class="name">Jiahang Chen</p>
-					<p class="role">Research Assistant<br>&nbsp;</p>
-				</div>
-			</div>
-			<!--<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/yangliu.jpg" /></p>
-					<p class="name">Yang Liu</p>
-					<p class="role">Senior Researcher<br>&nbsp;</p>
-				</div>
-			</div>-->
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/yexinli.jpg" /></p>
-					<p class="name">Yexin Li</p>
-					<p class="role">Researcher<br>&nbsp;</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="https://ising.cse.ust.hk/images/teampic/empty.png" /></p>
-					<p class="name">Yuxiang Zeng</p>
-					<p class="role">Ph.D. Student<br>2017</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="https://ising.cse.ust.hk/images/teampic/empty.png" /></p>
-					<p class="name">Qiyu Liu</p>
-					<p class="role">Ph.D. Student<br>2017</p>
-				</div>
-			</div>
-			<div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="https://ising.cse.ust.hk/images/teampic/empty.png" /></p>
-					<p class="name">Yan Luo</p>
-					<p class="role">Ph.D. Student<br>2019</p>
-				</div>
-			</div>
-			<!--div class="col-4 col-md-3 col-lg-2">
-				<div class="content" style="text-align:center">
-					<p><img src="images/group/xinleliang.jpg" /></p>
-					<p class="name">Xinle Liang</p>
-					<p class="role">Researcher</p>
-				</div>
-			</div>-->
-		</div>
-	</div>
-
-	<div class="section section-content section-meetings">
-		<div class="row title">
-			<div class="col">
-				<div class="title-text">Group Meetings</div>
-			</div>
-		</div>
-		<div class="row content">		
-			<div class="col-12">
-				<div class="content" style="text-align:center">
-					<p><a href="https://gohkust-my.sharepoint.com/personal/huxiaoyu_ust_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fhuxiaoyu%5Fust%5Fhk%2FDocuments%2FTRS%2D%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82%2D%E4%BC%9A%E8%AE%AE%E8%AE%B0%E5%BD%95&originalPath=aHR0cHM6Ly9nb2hrdXN0LW15LnNoYXJlcG9pbnQuY29tLzpmOi9nL3BlcnNvbmFsL2h1eGlhb3l1X3VzdF9oay9FblZ0Vl9BNmtVbExyRmR2TS13YVNTWUJjMURYWTc4LVktNWpLclRueVhlcnVRP3J0aW1lPWRodkVIdEtuMkVn" style="text-decoration:none">Click here to view all group meetings in the past</a></p>
-				</div>
-			</div>
-		</div>
-	</div>	
 
 	<div class="section section-content section-footer">
 		<div class="row title">
@@ -547,7 +180,5 @@
 
 
 </div> 
-
-  </body>
-
+</body>
 </html>

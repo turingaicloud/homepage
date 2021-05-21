@@ -1,0 +1,110 @@
+/* Top navigation bar */
+.menu-container { background-color: #4E2A84; justify-content: center;}
+.menu { min-height: 100px; max-width: 960px; align-items: center; margin: 0 auto;}
+.logo { margin-right: auto; }
+.menu-item { margin-right: 1rem; }
+.menu-item a { color: white; text-decoration: none}
+
+.container-fluid {
+	justify-content: center;
+}
+.section {
+	font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+	font-weight: 400;
+	font-size: 18px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #FAFAFA;
+	min-height: 400px;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.section-header {
+	background-image: url("images/0.svg");
+	background-size: cover;
+}
+.row {
+	max-width: 960px;
+	width: 100%;
+	justify-content: center;
+}
+.site-title {
+	text-align: center;
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+.site-subtitle {
+	text-align: center;
+	font-size: 1.25rem
+}
+.section-goals {
+	text-align: left;
+	margin-top: 3rem;
+	width: 90%;
+	color: #4F2A84;
+	display: flex;
+	justify-content: center;
+}
+.goals:first-child {
+	margin-right: 5rem;
+}
+.section-goals .title {
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-bottom: .5rem;
+}
+.section-content:nth-child(even) {
+	background-color: white;
+}
+.section-content .title {
+	font-weight: bold;
+	font-size: 1.7rem;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: .5rem;
+}
+.section-content .content {
+	margin-top: 2rem;
+	align-items: center;
+}	
+.section-content .content .image {
+	text-align: center;
+}	
+.section-content .content img {
+	width: 80%;
+}
+.name {
+	margin-bottom: 0;
+}
+.role {
+	color: #777;
+	font-size: 0.95rem;
+}
+.feature img {
+	width: 50%!important;
+}	
+.feature .role {
+	margin-top: .5rem;
+}
+.section-meetings .content {
+	margin-top: 1rem !important;
+}
+.section-meetings {
+	height: 300px;
+	min-height: 300px;
+}	
+.section-footer {
+	height: 100px;
+	min-height: 100px;
+}	
+.section-footer .title {
+	font-size: 1rem;
+}
+.group img {
+	border-radius: 50%;
+}
