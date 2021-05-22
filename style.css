@@ -50,8 +50,10 @@
 	display: flex;
 	justify-content: center;
 }
-.goals:first-child {
-	margin-right: 5rem;
+@media(max-width: 576px) {
+.goals {
+	margin-top: 2rem;
+}
 }
 .section-goals .title {
 	font-weight: bold;
