@@ -11,12 +11,12 @@
 <p><img src="https://github.com/turingaicloud/quickstart/raw/master/static/workflow.png" alt="Workflow" /></p>
 <p>The above picture illustrates TACC job submitting and debugging workflow.</p>
 <h2 id="upload-ssh-public-key-to-tacc">Upload SSH public key to TACC</h2>
-<p>Before using tcloud SDK, please make sure that you have submitted your public key to TACC. You may generate SSH public key according to the <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key">steps</a>.</p>
+<p>Application for beta-testing is open now. Before using tcloud SDK, please make sure that you have submitted your public key to TACC. You may generate SSH public key according to the <a target="_blank" href="https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key">steps</a>.</p>
 <h2 id="downloadinstall-tcloud-sdk">Download/Install tcloud SDK</h2>
 <ul>
-<li><strong>Download tcloud SDK</strong> \<br />
-Download the latest tcloud SDK from <a href="https://github.com/turingaicloud/quickstart/tags">tags</a>.</li>
-<li><strong>Install tcloud SDK</strong> \<br />
+<li><strong>Download tcloud SDK</strong> <br />
+Download the latest tcloud SDK from <a target="_blank" href="https://github.com/turingaicloud/quickstart/tags">tags</a>.</li>
+<li><strong>Install tcloud SDK</strong> <br />
 Place <code>setup.sh</code> and <code>tcloud</code> in the same directory, and run <code>setup.sh</code>.</li>
 </ul>
 <h2 id="configuration">Configuration</h2>
@@ -63,7 +63,7 @@ $ tcloud config [-f/--file] MYPRIVATEFILEPATH
 </code></pre>
 <ul>
 <li><p>Datasets</p>
-<p>In this section, you can specify the needed CityNet dataset name, and tcloud will help place the dataset access in <code>TACC_USERDIR</code>. You can view the table of CityNet datasets at <a href="https://docs.google.com/spreadsheets/d/18qi2YpYvuXkWns7KY9pHYQclhS1Yyt5ysqgZ4plYcTg/edit#gid=0">CityNet Dataset Info</a>.</p></li>
+<p>In this section, you can specify the needed CityNet dataset name, and tcloud will help place the dataset access in <code>TACC_USERDIR</code>. You can view the table of CityNet datasets at <a target="_blank" href="https://docs.google.com/spreadsheets/d/18qi2YpYvuXkWns7KY9pHYQclhS1Yyt5ysqgZ4plYcTg/edit#gid=0">CityNet Dataset Info</a>.</p></li>
 </ul>
 <pre><code class="yaml language-yaml">  datasets:
     - OpenRoadMap
@@ -85,9 +85,9 @@ $ tcloud config [-f/--file] MYPRIVATEFILEPATH
 <pre><code class="shell language-shell">  ssh -p 30041 -L 10006:127.0.0.1:10006  username@sing.cse.ust.hk /mnt/sharefs/home/username/.Miniconda3/envs/torch-env/bin/tensorboard --logdir=/mnt/sharefs/home/username/WORKDIR/PyTorch/runs --port=10006
 </code></pre>
 <h2 id="demo-video">Demo video</h2>
-<p>You can find the demo video at <a href="https://drive.google.com/file/d/1eEZzgH3MipdXy3eIfgasUaMdlMquCqf8/view?usp=sharing">demo video</a> and conda-cache videon at <a href="https://drive.google.com/file/d/1hfFfWZoJj6dlNiOK-dbyvrE_VmM07w7A/view?usp=sharing">conda-cache video</a>.</p>
+<p>You can find the demo video at <a target="_blank" href="https://drive.google.com/file/d/1eEZzgH3MipdXy3eIfgasUaMdlMquCqf8/view?usp=sharing">demo video</a> and conda-cache videon at <a target="_blank" href="https://drive.google.com/file/d/1hfFfWZoJj6dlNiOK-dbyvrE_VmM07w7A/view?usp=sharing">conda-cache video</a>.</p>
 <h2 id="examples">Examples</h2>
-<p>Basic examples are provided under the <a href="https://github.com/turingaicloud/quickstart/tree/master/example">example</a> folder. These examples include: <b>HelloWorld</b>, <b>TensorFlow</b>, <b>PyTorch</b> and <b>MXNet</b>.</p>
+<p>Basic examples are provided under the <a target="_blank" href="https://github.com/turingaicloud/quickstart/tree/master/example">example</a> folder. These examples include: <b>HelloWorld</b>, <b>TensorFlow</b>, <b>PyTorch</b> and <b>MXNet</b>.</p>
 
         </div>
         <style type='text/css'>body {
