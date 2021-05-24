@@ -93,6 +93,14 @@
 .feature .role {
 	margin-top: .5rem;
 }
+.section-recruit .card {
+	margin-top: 1rem;
+}
+.section-recruit .btn {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
 .section-meetings .content {
 	margin-top: 1rem !important;
 }
