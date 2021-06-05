@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Projects | Smart City TRS Project</title>
+	<meta name="description" content="TRS Smart City Project">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link href="./style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<body>
+
+<div class="menu-container" role="navigation">
+	<div class="menu d-flex">
+		<div class="logo p-2">
+			<img src="/images/logo.png" height=50 class="d-inline-block align-top">
+		</div>  
+		<div class="menu-item p-2"><a href="/index.html">Overview</a></div>
+		<div class="menu-item p-2"><a href="/people.html">People</a></div>
+		<div class="menu-item p-2"><a href="/projects.html">Projects</a></div>
+		<div class="menu-item p-2"><a href="/tacc.html">TACC</a></div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="section section-header" style="height: 300px; min-height: 300px">
+		<div class="row section-titles">
+			<div class="col">
+				<div class="site-title">Towards High-Performance, Privacy-Preserving AI Computing</div>
+				<div class="site-subtitle">State-of-the-Art Research & Applications</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-projects">
+		<div class="row content">   
+			<div class="col-sm-4 area">
+				<div class="title">
+					<span>System for</span> <span>Machine Learning</span>
+				</div>
+				<div class="icon">
+					<img src="images/4-4.svg">
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="project">
+					<div class="name">Scalable and Efficient GNN Training for Large Graphs</div> 
+					<div class="authors">Authors: Xinchen Wan, Kaiqiang Xu, Xudong Liao, Yilun Jin, Kai Chen, Xin Jin</div> 
+					<div class="abstract">We present G3, a distributed system that can efficiently train GNNs with near-linear scalability over billion-edge graphs. G3 introduces GNN hybrid parallelism to scale out GNN training by sharing intermediate results peer-to-peer in fine granularity. It leverages locality-aware iterative partitioning and multi-level pipeline scheduling to exploit acceleration opportunities.</div> 
+				</div>
+				<div class="project">
+					<div class="name">Egeria: An Efficient DNN Training System with Knowledge-Guided Layer Freezing</div> 
+					<div class="authors">Authors: Yiding Wang, Decang Sun, Fan Lai, Mosharaf Chowdhury, Kai Chen</div> 
+					<div class="abstract">We design Egeria, a knowledge-guided DNN training system that employs semantic knowledge from a reference model to accurately evaluate individual layer's training plasticity and safely freeze the converged ones, saving their corresponding backward computation and communication. Our reference model is generated on the fly using quantization techniques and runs forward operations asynchronously on available CPUs to minimize the overhead.</div> 
+				</div>
+			</div>  
+		</div>
+	</div>
+
+	<div class="section section-projects">
+		<div class="row content">   
+			<div class="col-sm-4 area">
+				<div class="title">
+					<span>Privacy-Preserving</span> <span>Computing</span>
+				</div>
+				<div class="icon">
+					<img src="images/4-3.svg">
+				</div>
+			</div>
+			<div class="col-sm-8 image">
+				<div class="project">
+					<div class="name">Sphinx: Enabling Privacy-Preserving Online Learning over the Cloud</div> 
+					<div class="authors">Authors: Han Tian, Chaoliang Zeng, Zhenghang Ren, Di Chai, Kai Chen, Qiang Yang</div> 
+					<div class="abstract">We present Sphinx, a privacy-preserving online learning system that strikes a balance between model performance, computational efficiency, and privacy preservation. At its core, Sphinx combines homomorphic encryption and differential privacy reciprocally to maintain the model with most of its parameters as plaintexts, enabling fast training and inference protocol designs.</div> 
+				</div>
+				<div class="project">
+					<div class="name">FedEval: A Benchmark System with a Comprehensive Evaluation Model for Federated Learning</div> 
+					<div class="authors">Authors: Di Chai, Leye Wang, Junxue Zhang, Kai Chen, Qiang Yang</div> 
+					<div class="abstract">We propose a comprehensive evaluation framework for FL systems. Specifically, we first introduce the PRACT model, which defines five metrics that cannot be excluded from FL evaluation, including Privacy, Robustness, Accuracy, Communication, and Time efficiency. Then we design and implement a benchmarking system called FedEval, which enables the systematic evaluation and comparison of existing works under consistent experimental conditions. </div> 
+				</div>
+			</div>  
+		</div>
+	</div>
+
+	<div class="section section-projects">
+		<div class="row content">   
+			<div class="col-sm-4 area">
+				<div class="title">
+					<span>Network for</span> <span>Machine Learning</span>
+				</div>
+				<div class="icon">
+					<img src="images/4-1.svg">
+				</div>
+			</div>
+			<div class="col-sm-8 image">
+				<div class="project">
+					<div class="name">Domain-Specific Communication Optimization for Distributed DNN Training</div> 
+					<div class="authors">Authors: Hao Wang, Jingrong Chen, Xinchen Wan, Han Tian, Jiacheng Xia, Gaoxiong Zeng, Kai Chen, Wei Bai, Junchen Jiang</div> 
+					<div class="abstract">We present DLCP, a network substrate that speeds up DNN training by fully embracing several unique characteristics of deep learning. Compared to prior work in this space, DLCP integrates three simple-yet-effective techniques to form a multi-layered protection against long tail latency caused by transient packet drops and queueing. </div> 
+				</div>
+			</div>  
+		</div>
+	</div>
+
+	<div class="section section-projects">
+		<div class="row content">   
+			<div class="col-sm-4 area">
+				<div class="title">
+					<span>AI Algorithm &</span> <span>Applications</span>
+				</div>
+				<div class="icon">
+					<img src="images/4-2.svg">
+				</div>
+			</div>
+			<div class="col-sm-8 image">
+				<div class="project">
+					<div class="name">CityNet: A Multi-city, Multi-modal Dataset for Smart City</div> 
+					<div class="authors">Authors: Xu Geng, Yilun Jin, Zhengfei Zheng, Yu Yang, Yexin Li, Han Tian, Peibo Duan, Leye Wang, Jiannong Cao, Hai Yang, Qiang Yang, Kai Chen</div> 
+					<div class="abstract">We present CityNet, a multi-modal urban dataset containing data from 7 cities, each of which coming from 3 data sources. To introduce CityNet, we first present its generation process as well as its basic properties. In addition, to facilitate the use of CityNet, we carry out extensive data mining and machine learning experiments, including spatio-temporal predictions, transfer learning, and reinforcement learning.</div> 
+				</div>
+			</div>  
+		</div>
+	</div>
+
+
+	<div class="section section-content section-footer">
+		<div class="row title">
+			<div class="col">
+				<div>an RGC Theme-based Research Scheme-funded Project</div>
+			</div>
+		</div>
+	</div>
+
+
+</div> 
+</body>
+</html>

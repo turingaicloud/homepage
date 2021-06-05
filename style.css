@@ -60,7 +60,7 @@
 	font-size: 1.2rem;
 	margin-bottom: .5rem;
 }
-.section-content:nth-child(even) {
+.section-content:nth-child(even), .section-projects:nth-child(even) {
 	background-color: white;
 }
 .section-content .title {
@@ -80,6 +80,16 @@
 .section-content .content img {
 	width: 80%;
 }
+
+/* Homepage */
+.feature img {
+	width: 50%!important;
+}	
+.feature .role {
+	margin-top: .5rem;
+}
+
+/* People */
 .name {
 	margin-bottom: 0;
 }
@@ -87,12 +97,10 @@
 	color: #777;
 	font-size: 0.95rem;
 }
-.feature img {
-	width: 50%!important;
-}	
-.feature .role {
-	margin-top: .5rem;
+.group img {
+	border-radius: 50%;
 }
+
 .section-recruit .card {
 	margin-top: 1rem;
 }
@@ -107,14 +115,59 @@
 .section-meetings {
 	height: 300px;
 	min-height: 300px;
-}	
+}
+
+/* Projects */
+.section-projects {
+	padding-top: 4rem;
+}
+.section-projects .area {
+	padding-right: 2rem;
+}
+.section-projects .icon {
+	text-align: right;
+	margin-top: 1rem;
+}
+.section-projects .icon img {
+	height: 4rem;
+}
+.section-projects .area .title {
+	font-weight: bold;
+	font-size: 1.8rem;
+	text-align: right;
+}
+.section-projects .area .title span {
+	display: inline-block;
+}
+@media(max-width: 576px) {
+	.section-projects .icon {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.section-projects .area .title {
+		text-align: center;
+	}
+}
+.section-projects .project:not(:last-child) {
+	margin-bottom: 2rem;
+}
+.section-projects .name {
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+.section-projects .authors {
+	color: #666;
+}
+.section-projects .abstract {
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+}
+
+/* Footer */
 .section-footer {
 	height: 100px;
 	min-height: 100px;
 }	
 .section-footer .title {
 	font-size: 1rem;
-}
-.group img {
-	border-radius: 50%;
 }
