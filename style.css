@@ -1,9 +1,11 @@
 /* Top navigation bar */
 .menu-container { background-color: #4E2A84; justify-content: center;}
+.menu-item-container {width:  60%; overflow: scroll;  justify-content: flex-end;}
 .menu { min-height: 100px; max-width: 960px; align-items: center; margin: 0 auto;}
 .logo { margin-right: auto;}
 .menu-item { margin-right: 1rem; }
 .menu-item a { color: white; text-decoration: none}
+a {text-decoration: none; color: black }
 
 .container-fluid {
 	justify-content: center;
