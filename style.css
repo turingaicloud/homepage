@@ -1,12 +1,12 @@
 /* Top navigation bar */
-.menu-container { background-color: #4E2A84; justify-content: center;}
+.menu-container { background-color: #452d69; justify-content: center;}
 .menu-item-container {width:  60%; overflow: scroll;  justify-content: flex-end;}
 .menu { min-height: 100px; max-width: 960px; align-items: center; margin: 0 auto;}
 .logo { margin-right: auto;}
 .menu-item { margin-right: 1rem; }
-.menu-item a { color: white; text-decoration: none}
+.menu-item a { color: white; text-decoration: none; font-size: 1.1rem}
 a {text-decoration: none; color: black }
-.btn-primary {background-color: #4E2A84; border: #4E2A84}
+.btn-primary {background-color: #452d69; border: #452d69}
 .btn-primary:hover, .btn-primary:visited, .btn-primary:focus, .btn-primary:active {background-color: #3f2269; border: #3f2269; box-shadow:  none}
 
 .container-fluid {
@@ -215,7 +215,6 @@ a {text-decoration: none; color: black }
 	font-style: italic;
 }
 .section-testimonials .sign {
-	font-family: "Source Sans Pro";
 	margin-top:  0.25rem;
 	font-size: .9rem;
 	font-weight: bold;
