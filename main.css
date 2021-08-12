@@ -252,6 +252,11 @@ body { font-family: 'SF Pro', 'Roboto', sans-serif;     -webkit-font-smoothing: 
 .section-testimonials .numbers {
 	text-align: center;
 }
+
+.section-testimonials .numbers .figure {
+	font-weight: bold;
+	font-size: 1.35rem;
+}
 .section-testimonials .author-name {
 	text-align: right;
 	font-size: 1.2rem;
