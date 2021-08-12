@@ -1,30 +1,28 @@
 /* Top navigation bar */
 .menu-container { background-color: #452d69; justify-content: center;}
 .menu-item-container {width: 60%; overflow: scroll;  justify-content: flex-end;}
-.menu { min-height: 100px; max-width: 960px; align-items: center; margin: 0 auto;}
-.logo { margin-right: auto;}
+.menu { min-height: 70px; max-width: 960px; align-items: center; margin: 0 auto;}
+.logo { margin-right: auto;} 
+.logo img {height:  40px;}
 .menu-item:not(:last-child) { margin-right: 1rem; }
-.menu-item a { color: white; text-decoration: none; font-size: 1.1rem}
+.menu-item a { color: white; text-decoration: none; font-size: 1rem}
 
 @media(max-width: 575.98px) {
-	.logo { margin: 1rem auto; text-align: center;}
-	.menu-item-container { margin-bottom: 1rem; width: 100%; justify-content: center;}
+	.logo { margin: 0 auto; margin-top: 1.4rem; margin-bottom: 1rem; text-align: center;}
+	.menu-item-container { margin-bottom: 0.5rem; width: 100%; justify-content: center;}
 }
 
 /* Basic Layout */
 
 a {text-decoration: none; color: black }
-.btn-primary {background-color: #452d69; border: #452d69}
-.btn-primary:hover, .btn-primary:visited, .btn-primary:focus, .btn-primary:active {background-color: #3f2269; border: #3f2269; box-shadow:  none}
+.btn-primary {background-color: #452d69; border-color: #452d69}
+.btn-primary:hover, .btn-primary:visited, .btn-primary:focus, .btn-primary:active {background-color: #3f2269; border-color: #3f2269; box-shadow:  none}
+body { font-family: 'IBM Plex Sans', 'Source Sans Pro', sans-serif;     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; text-size-adjust: 100%;}
 
 .container-fluid {
 	justify-content: center;
 }
 .section {
-	font-family: 'Source Sans Pro', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    text-size-adjust: 100%;
 	font-weight: 400;
 	font-size: 18px;
 	align-items: center;
@@ -47,7 +45,7 @@ a {text-decoration: none; color: black }
 }
 .site-title {
 	text-align: center;
-	font-size: 2.25rem;
+	font-size: 2rem;
 	font-weight: bold;
 }
 .site-subtitle {
@@ -183,6 +181,9 @@ a {text-decoration: none; color: black }
 }
 
 /* TACC */
+.site-title.tacc {
+	font-size: 2.25rem;
+}
 .site-cta {
 	margin-top: 3rem;
 	text-align: center;
@@ -202,8 +203,8 @@ a {text-decoration: none; color: black }
 }
 .site-items .item {
 	margin-left: 0.5rem;
-	font-size: 0.95rem;
-	text-decoration: underline;
+	font-size: 1rem;
+	border-bottom: 1px solid black;
 }
 .section-redbird {
 	padding-top: 0px;
@@ -224,6 +225,9 @@ a {text-decoration: none; color: black }
 .section-actions {
 	text-align: center;
 	background-color: #FAFAFA!important;
+}
+.section-actions p {
+	font-size: 1.1rem;
 }
 .section-testimonials {
 	font-size: 1rem;
@@ -269,7 +273,7 @@ a {text-decoration: none; color: black }
 }
 
 .section-term .link a {
-	text-decoration: underline;
+	border-bottom: 1px solid black;
 }
 
 /* Footer */
