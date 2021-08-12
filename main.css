@@ -226,7 +226,6 @@ body { font-family: 'SF Pro', 'Roboto', sans-serif;     -webkit-font-smoothing: 
 .subsection-differ {
 	margin-top: -50px!important;
 }
-
 @media (max-width: 575.98px) {
 	.subsection-differ {
 		margin-top: 10px!important;
@@ -238,13 +237,20 @@ body { font-family: 'SF Pro', 'Roboto', sans-serif;     -webkit-font-smoothing: 
 }
 .section-actions {
 	text-align: center;
-	background-color: #FAFAFA!important;
 }
 .section-actions p {
 	font-size: 1.1rem;
 }
 .section-testimonials {
 	font-size: 1rem;
+}
+.section-testimonials .title-quote {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+.section-testimonials .numbers {
+	text-align: center;
 }
 .section-testimonials .author-name {
 	text-align: right;
