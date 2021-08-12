@@ -102,15 +102,22 @@ a {text-decoration: none; color: black }
 }
 
 /* People */
-.name {
+
+.section-group img {
+	border-radius: 50%;
+}
+
+.section-group p:nth-child(2) {
 	margin-bottom: 0;
 }
-.role {
+
+.section-group p:nth-child(3) {
 	color: #777;
 	font-size: 0.95rem;
 }
-.group img {
-	border-radius: 50%;
+
+.section-group {
+	text-align: center;
 }
 
 .section-recruit .card {
@@ -177,8 +184,17 @@ a {text-decoration: none; color: black }
 
 /* TACC */
 .site-cta {
-	margin-top: 2rem;
+	margin-top: 3rem;
 	text-align: center;
+}
+.site-cta .btn {
+	border-color: #452d69;
+	color:  #452d69;
+}
+.site-cta .btn:hover {
+	background-color: #452d69;
+	border-color: #452d69;
+	color: white;
 }
 .site-items {
 	margin-top: 1rem;
@@ -186,6 +202,7 @@ a {text-decoration: none; color: black }
 }
 .site-items .item {
 	margin-left: 0.5rem;
+	font-size: 0.95rem;
 	text-decoration: underline;
 }
 .section-redbird {
@@ -238,11 +255,33 @@ a {text-decoration: none; color: black }
 	}
 }
 
+/* Term */
+.section-term {
+	height: 200px;
+	min-height: 200px;
+}
+
+.section-term .link {
+	font-size: 1.1rem;
+	font-weight: normal;
+	margin-top: -1rem;
+	text-align: center;
+}
+
+.section-term .link a {
+	text-decoration: underline;
+}
+
 /* Footer */
 .section-footer {
 	height: 100px;
 	min-height: 100px;
 }	
-.section-footer .title {
-	font-size: 1rem;
+.section-footer .copyright {
+	font-size: .9rem;
+	font-weight: normal;
+}
+.section-footer .trs {
+	font-size: .9rem;
+	font-weight: normal;
 }
