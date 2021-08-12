@@ -8,7 +8,7 @@
 .menu-item a { color: white; text-decoration: none; font-size: 1rem}
 
 @media(max-width: 575.98px) {
-	.logo { margin: 0 auto; margin-top: 1.4rem; margin-bottom: 1rem; text-align: center;}
+	.logo { margin: 0 auto; margin-top: .75rem; margin-bottom: .5rem; text-align: center;}
 	.menu-item-container { margin-bottom: 0.5rem; width: 100%; justify-content: center;}
 }
 
@@ -17,7 +17,7 @@
 a {text-decoration: none; color: black }
 .btn-primary {background-color: #452d69; border-color: #452d69}
 .btn-primary:hover, .btn-primary:visited, .btn-primary:focus, .btn-primary:active {background-color: #3f2269; border-color: #3f2269; box-shadow:  none}
-body { font-family: 'IBM Plex Sans', 'Source Sans Pro', sans-serif;     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; text-size-adjust: 100%;}
+body { font-family: 'SF Pro', 'Roboto', sans-serif;     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; text-size-adjust: 100%;}
 
 .container-fluid {
 	justify-content: center;
@@ -48,9 +48,22 @@ body { font-family: 'IBM Plex Sans', 'Source Sans Pro', sans-serif;     -webkit-
 	font-size: 2rem;
 	font-weight: bold;
 }
+.site-title span {
+	white-space: nowrap;
+}
 .site-subtitle {
 	text-align: center;
-	font-size: 1.25rem
+	font-size: 1.25rem;
+}
+@media(max-width: 575.98px) {
+	.site-title, .site-title.tacc {
+		font-size: 1.75rem!important;
+	}	
+	.site-subtitle {
+		max-width: 90%;
+		margin: 0 auto;
+		margin-top: 2rem;
+	}
 }
 .section-goals {
 	text-align: left;
@@ -205,6 +218,7 @@ body { font-family: 'IBM Plex Sans', 'Source Sans Pro', sans-serif;     -webkit-
 	margin-left: 0.5rem;
 	font-size: 1rem;
 	border-bottom: 1px solid black;
+	white-space: nowrap;
 }
 .section-redbird {
 	padding-top: 0px;
