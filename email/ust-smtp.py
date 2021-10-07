@@ -6,7 +6,8 @@ import sys
 subject = "TACC October Newsletter"
 file = open(sys.argv[1]).readlines()
 
-list_trs = "trs-smart-city-team@lists.ust.hk"
+list_trs_faculty = "trs-smart-city-faculty@lists.ust.hk"
+list_trs_student = "trs-smart-city-team@lists.ust.hk"
 list_tacc = "tacc-contact@lists.ust.hk"
 list_users = "tacc-users@lists.ust.hk"
 to_addrs = [list_tacc]
