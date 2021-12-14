@@ -1,6 +1,6 @@
 /* Top navigation bar */
 .menu-container { background-color: #452d69; justify-content: center;}
-.menu-item-container {width: 60%; overflow: scroll;  justify-content: flex-end;}
+.menu-item-container {width: 60%; justify-content: flex-end;}
 .menu { min-height: 70px; max-width: 960px; align-items: center; margin: 0 auto;}
 .logo { margin-right: auto;} 
 .logo img {height:  40px;}
