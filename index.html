@@ -113,25 +113,25 @@
 		<div class="row title">
 			<div class="col">
 				<div class="title-text">Highlights on Turing AI Computing Cloud</div>
-				<div style="font-size:1rem;font-weight: normal;font-style: italic;">data collected in Apr 2022</div>
+				<div style="font-size:1rem;font-weight: normal;font-style: italic;">data collected in <span id="stats-date">Apr 2022</span></div>
 			</div>
 		</div>
 		<div class="row numbers g-4 py-5 row-cols-1 row-cols-sm-3">
 			<div class="col">
 				<div>
-					<div class="figure">144 users</div>
+					<div class="figure"><span id="stats-user">144</span> users</div>
 					<p>joined TACC since 24/05/2021</p>
 				</div>
 			</div>
 			<div class="col">
 				<div>
-					<div class="figure">6,290 tasks</div>
+					<div class="figure"><span id="stats-task">6,290</span> tasks</div>
 					<p>submitted to TACC for processing</p>
 				</div>
 			</div>
 			<div class="col">
 				<div>
-					<div class="figure">59,755 GPU hours</div>
+					<div class="figure"><span id="stats-gpu">59,755</span> GPU hours</div>
 					<p>used for machine learning tasks</p>
 				</div>
 			</div>
@@ -182,7 +182,20 @@
 			</div>
 		</div>
 	</div>
-	
+
+<script>
+	var user = 144;
+	var task = 6290;
+	var gpu = 59757;
+
+	const date = new Date(); 
+	const month = date.toLocaleString('en-US', { month: 'long', year: 'numeric'});
+	document.getElementById("stats-date").innerHTML = month;
+	document.getElementById("stats-task").innerHTML = task.toLocaleString('en-US', {minimumFractionDigits: 0})
+	document.getElementById("stats-user").innerHTML = user.toLocaleString('en-US', {minimumFractionDigits: 0})
+	document.getElementById("stats-gpu").innerHTML = gpu.toLocaleString('en-US', {minimumFractionDigits: 0})
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163554440-4"></script>
 <script>
