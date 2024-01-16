@@ -8,6 +8,9 @@
 	<title>TACC | Turing AI Computing Cloud | Scalable AI Infrastructure Designed for Evolving Machine Learning Researches</title>
 	<meta name="description" content="TRS Smart City Project">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/papaparse@5.0.0/papaparse.min.js"></script>
 	<link href="./main.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,28 +117,150 @@
 		<div class="row title">
 			<div class="col">
 				<div class="title-text">Highlights on Turing AI Computing Cloud</div>
-				<div style="font-size:1rem;font-weight: normal;font-style: italic;">data collected in <span id="stats-date">Apr 2022</span></div>
+				<div style="font-size:1rem;font-weight: normal;font-style: italic;">data collected in <span id="stats-date">(loading)</span></div>
 			</div>
 		</div>
-		<div class="row numbers g-4 py-5 row-cols-1 row-cols-sm-3">
+		<div class="row numbers g-4 pt-5 pb-3 row-cols-1 row-cols-sm-3">
 			<div class="col">
 				<div>
-					<div class="figure"><span id="stats-user">144</span> users</div>
+					<div class="figure"><span id="stats-user">(loading)</span> users</div>
 					<p>joined TACC since 24/05/2021</p>
 				</div>
 			</div>
 			<div class="col">
 				<div>
-					<div class="figure"><span id="stats-task">6,290</span> tasks</div>
+					<div class="figure"><span id="stats-task">(loading)</span> tasks</div>
 					<p>submitted to TACC for processing</p>
 				</div>
 			</div>
 			<div class="col">
 				<div>
-					<div class="figure"><span id="stats-gpu">59,755</span> GPU hours</div>
+					<div class="figure"><span id="stats-gpu">(loading)</span> GPU hours</div>
 					<p>used for machine learning tasks</p>
 				</div>
 			</div>
+		</div>
+
+		<div class="row g-4 pb-5">
+			<div class="col px-4 text-center">
+				<canvas id="userChart" width="400" height="200"></canvas>
+			</div>
+			<div class="col px-4 text-center">
+				<canvas id="taskChart" width="400" height="200"></canvas>
+			</div>
+			<script>
+				function createOption() {
+					return {
+		            type: 'line',
+		            options: {
+		                plugins: {
+		                    legend: {
+		                        display: false
+		                    },
+		                    title: {
+		                        display: true,
+		                        text: 'Chart Title', // Replace with your title
+		                        font: {
+		                            size: 14
+		                        }
+		                    }
+		                },
+		                scales: {
+		                    x: {
+		                        type: 'time',
+		                        time: {
+		                            unit: 'month',
+		                            tooltipFormat: 'yyyy-MM',
+		                            displayFormats: {
+		                                month: 'yy-MM'
+		                            }
+		                        },
+		                        grid: {
+		                            display: true,
+		                            drawBorder: true,
+		                            drawOnChartArea: true,
+		                            color: function(context) {
+		                                if (context.tick && context.tick.label.endsWith('-01')) {
+		                                    return '#999';
+		                                } else {
+		                                    return '#fff'; // Light gray for other grid lines
+		                                }
+		                            }
+		                        }
+		                    }
+		                },
+		                interaction: {
+		                    mode: 'nearest',
+		                    intersect: false,
+		                    axis: 'x'
+		                }
+		            }
+		        };
+				}
+
+		    function setupChart(data) {
+		        var dates = data.map(item => item.Date);
+		        var userNumbers = data.map(item => item.Users);
+		        var taskNumbers = data.map(item => item.Tasks);
+
+						var Color1 = '#452d69'; // Nvidia Green
+		        var Color2 = '#76b900';  // Nvidia Dark
+
+		        var ctxUser = document.getElementById('userChart').getContext('2d');
+		        var userOptions = createOption();
+		        userOptions.data = {
+		            labels: dates,
+		            datasets: [{
+		                label: 'User Growth',
+		                data: userNumbers,
+		                backgroundColor: Color1,
+		                borderColor: Color1,
+		                borderWidth: 2,
+		                pointRadius: 0 // Removes the dots
+		            }]
+		        };
+		        userOptions.options.plugins.title.text = 'User Growth Over Time';
+		        new Chart(ctxUser, userOptions);
+
+
+
+		        var ctxTask = document.getElementById('taskChart').getContext('2d');
+		        var taskOptions = createOption();
+		        taskOptions.data = {
+		            labels: dates,
+		            datasets: [{
+		                label: 'Task Growth',
+		                data: taskNumbers,
+		                backgroundColor: Color2,
+		                borderColor: Color2,
+		                borderWidth: 2,
+		                pointRadius: 0 // Removes the dots
+		            }]
+		        };
+		        taskOptions.options.plugins.title.text = 'Task Growth Over Time';
+		        new Chart(ctxTask, taskOptions);
+
+		        //update the number figure
+		        var lastEntry = data[data.length - 1];
+        		var user = parseInt(lastEntry.Users);
+		        var task = parseInt(lastEntry.Tasks);
+		        var gpu = task * 9.7;
+
+        		const lastDate = new Date(lastEntry.Date); 
+        		const formattedDate = lastDate.toLocaleString('en-US', { month: 'long', year: 'numeric'});
+
+		        document.getElementById("stats-date").innerHTML = formattedDate;
+		        document.getElementById("stats-task").innerHTML = task.toLocaleString('en-US', {minimumFractionDigits: 0})
+		        document.getElementById("stats-user").innerHTML = user.toLocaleString('en-US', {minimumFractionDigits: 0})
+		        document.getElementById("stats-gpu").innerHTML = gpu.toLocaleString('en-US', {minimumFractionDigits: 0})
+		    }
+
+		    fetch('./stats.csv')
+		        .then(response => response.text())
+		        .then(csvText => Papa.parse(csvText, { header: true, skipEmptyLines:true }))
+		        .then(data => setupChart(data.data));
+		</script>
+
 		</div>
 
 		<div class="row">
@@ -201,18 +326,6 @@
 		</div>
 	</div>
 
-<script>
-	var user = 388;
-	var task = 23576;
-	var gpu = task * 9.7;
-
-	const date = new Date(); 
-	const month = date.toLocaleString('en-US', { month: 'long', year: 'numeric'});
-	document.getElementById("stats-date").innerHTML = month;
-	document.getElementById("stats-task").innerHTML = task.toLocaleString('en-US', {minimumFractionDigits: 0})
-	document.getElementById("stats-user").innerHTML = user.toLocaleString('en-US', {minimumFractionDigits: 0})
-	document.getElementById("stats-gpu").innerHTML = gpu.toLocaleString('en-US', {minimumFractionDigits: 0})
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163554440-4"></script>
@@ -223,6 +336,8 @@
 
   gtag('config', 'UA-163554440-4');
 </script>
+
+
 
 
 </div> 
