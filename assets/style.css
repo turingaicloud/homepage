@@ -21,7 +21,7 @@ a {
     font-size: 0.8rem;
     line-height: 2rem;
     background-color: #452d69;
-    padding: 8px 24px;
+    padding: 8px 16px;
     color: white;
     font-weight: bold;
     border: 1px solid #452d69;
@@ -82,9 +82,12 @@ a {
     }
     .menubar .logo {
         margin-right: 0rem;
-        height: 60px;
+        height: 80px;
         padding-top: 18px;
         padding-bottom: 0px;
+    }
+    .menubar .logo img {
+        height: 42px;
     }
 }
 .menubar .item {
