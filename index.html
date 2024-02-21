@@ -344,7 +344,7 @@
             var lastEntry = data[data.length - 1];
             var user = parseInt(lastEntry.Users);
             var task = parseInt(lastEntry.Tasks);
-            var gpu = task * 9.7;
+            var gpu = Math.ceil(task * 9.7);
 
             const lastDate = new Date(lastEntry.Date); 
             const formattedDate = lastDate.toLocaleString('en-US', { month: 'long', year: 'numeric'});
