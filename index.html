@@ -1,345 +1,364 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TACC | Turing AI Computing Cloud | Scalable AI Infrastructure Designed for Evolving Machine Learning Researches</title>
-	<meta name="description" content="TRS Smart City Project">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/papaparse@5.0.0/papaparse.min.js"></script>
-	<link href="./main.css" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-	<link rel="shortcut icon" href="/images/favicon.ico">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TACC | iSING Lab HKUST | Scalable AI Infrastructure Designed for Evolving Machine Learning Researches</title>
+    <link rel="stylesheet" href="./assets/bulma.min.css">
+    <link href="./assets/bulma-divider.min.css" rel="stylesheet">
+    <script src="./assets/jquery-3.6.0.min.js"></script>
 
+    <link href="./assets/style.css" rel="stylesheet">
+    
+    <script src="./assets/chart.js"></script>
+    <script src="./assets/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="./assets/papaparse.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<div class="menu-container sticky-top" role="navigation">
-	<div class="menu row">
-		<div class="logo col-sm-2">
-			<a href="/"><img src="/images/logo.png" class="d-inline-block align-top"></a>
-		</div>  
-		<div class="menu-item-container d-flex col-sm-10">
-			<div class="menu-item p-2"><a href="/people.html">People</a></div>
-			<div class="menu-item p-2"><a href="/projects.html">Projects</a></div>
-			<div class="menu-item p-2"><a href="/trs.html">TRS</a></div>
-			<div class="menu-item p-2"><a href="https://ising.cse.ust.hk/">iSING Lab</a></div>
-			<div class="menu-item p-2"><a href="https://console.tacc.ust.hk/">Login</a></div>
-		</div>
-	</div>
-</div>
+    <div class="menubar">
+        <div class="container">
+            <div class="columns is-multiline is-desktop is-align-items-center is-justify-content-center">
+                <div class="column is-narrow logo has-text-centered"><img src="./assets/tacc-logo.png"></div>
+                <div class="column has-text-centered">
+                    <div class="columns is-mobile is-align-items-center items">
+                        <div class="column is-narrow item"><a href="#overview">Overview</a></div>
+                        <div class="column is-narrow item"><a href="#research">Research</a></div>
+                        <div class="column is-narrow item"><a href="#hkust">@HKUST</a></div>
+                        <div class="column is-narrow item"><a href="#collab">Collaboration</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="section section-header">
-	<div class="row section-titles">
-		<div class="col">
-			<h1 class="site-title tacc">Tap the Power of <span>Turing AI Computing Cloud</span></h1>
-			<div class="site-subtitle">Scalable AI infrastructure designed for evolving machine learning researches</div>
-			<div class="site-cta">
-				<span class="item"><a href="#cta-target" class="btn btn-outline-dark">Application Now Open</a></span>
-			</div>
-			<div class="site-items">
-				<span class="item"><a href="https://github.com/turingaicloud/quickstart" target="_blank">Follow Us on Github</a></span>
-				<span class="item"><a href="https://mp.weixin.qq.com/s?__biz=Mzg5ODY1NDE3NA==&mid=2247483662&idx=1&sn=b2ee8436a4b3183571d0fcf5cb9bd009" target="_blank">Follow Us on WeChat</a></span>
-				<span class="item"><a href="https://github.com/turingaicloud/quickstart/issues" target="_blank">Issue Report / Feature Request</a></span>
-			</div>				
-		</div>
-	</div>
-</div>
+    <div class="section banner">
+        <div class="container">
+            <div class="columns is-desktop">
+                <div class="column banner-text">
+                    <p><span class="text-colored">Scalable AI Infrastructure</span> <br> Designed for Evolving Machine Learning Researches</p>
+                    <p class="banner-subtitle">Tap into the Power of Turing AI Computing Cloud (TACC)</p>
+                    <p>
+                        <a class="tacc-button" href="#hkust">Apply for access</a>
+                        <a class="tacc-button button-secondary" href="https://github.com/turingaicloud/quickstart" target="_blank">Follow us on GitHub</a>
+                    </p>
+                </div>
+                <div class="column banner-image"></div>
+            </div>        
+        </div>
+    </div>
 
-<div class="container-fluid">
-	<div class="section section-content section-redbird">
-		<div class="row content">
-			<div class="col-sm-6 image">
-				<img style="height: 500px; object-fit: contain;" src="images/redbird.jpg" /> 
-			</div>      
-			<div class="col-sm-6">
-				<div class="content">
-					<p><strong>Turing AI Computing Cloud</strong> (TACC) is a cloud platform for research and education in machine learning with open access to the research community.</p>
-					<p>Developed by HKUST and initially deployed in 2020, TACC supports research work on a wide range of machine learning applications with high-performance and scalable infrastructure on both software- and hardware-level.</p>
-				</div>
-			</div>
-		</div>
+    <div class="section overview" id="overview">
+        <div class="container">
+            <h2 class="section-title">TACC is an <span class="text-underlined text-colored">efficient cluster management solution</span> optimized for <span class="spacing"><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>machine learning applications in large-scale GPU clusters</h2>
+            <div class="columns">
+                <p class="column"></p>
+                <p class="column mt-4">TACC supports research work on a wide range of machine learning applications with high-performance and scalable infrastructure on both software- and hardware-level. TACC is tailored to the workflow of machine learning application, providing you with a more efficient process of managing, deploying and scaling compute-intensive machine learning jobs in a computing cluster.</p>
+            </div>            
+        </div>
+    </div>
 
-		<div class="row content subsection-differ">    
-			<div class="col-sm-6">
-				<div class="content">
-					<p>TACC differs significantly from typical cloud computing platforms such as Amazon AWS and Microsoft Azure. </p>
-					<p>TACC is tailored to the workflow of machine learning application, providing you with a more efficient process of managing, deploying and scaling compute-intensive machine learning jobs in a computing cluster.</p>
-				</div>
-			</div>
-			<div class="col-sm-6 image">
-				<img src="images/workflow.png" /> 
-			</div>  
-		</div>
-	</div>
+    <div class="section research" id="research">
+        <div class="container">
+            <div class="columns is-multiline is-mobile">
+                <div class="column is-3-tablet is-6-mobile">
+                    <img src="assets/tech-1.svg">
+                    <p class="item-title"">Unified Interface</p>
+                    <p>The unified interface processes user job profiles for the machine learning cluster and offers tools for job monitoring, output retrieval, and log streaming. It enables job submission from local environments and incorporates environment provisioning scripts before scheduler submission.</p>
+                </div>
+                <div class="column is-3-tablet is-6-mobile">
+                    <img src="assets/tech-2.svg">
+                    <p class="item-title"">ML Systems</p>
+                    <p>ML frameworks optimize model development with state-of-the-art parallelization and distributed training techniques. These strategies improve data processing and algorithm execution, enabling efficient handling of complex computations and large datasets. </p>
+                </div>
+                <div class="column is-3-tablet is-6-mobile">
+                    <img src="assets/tech-3.svg">
+                    <p class="item-title"">Cluster Scheduler</p>
+                    <p>The cluster scheduler optimizes resource allocation in a machine learning cluster by analyzing job performance factors like completion time, resource utilization, and efficiency. This critical component boosts cluster efficiency and throughput.</p>
+                </div>
+                <div class="column is-3-tablet is-6-mobile">
+                    <img src="assets/tech-4.svg">
+                    <p class="item-title"">AI-centric Networking</p>
+                    <p>Our research enhances AI workloads by efficiently managing the transport of large models and utilizing SmartNICs for compute offloading. This setup optimizes data flow and reduces latency, ensuring high performance and scalability for AI applications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="section section-content section-actions" id="cta-target"> 
-		<div class="row g-4 py-5 row-cols-1 row-cols-sm-3">
-			<div class="col">
-				<div>
-					<h2>Docs and Demos</h2>
-					<p>Comprehensive docs and examples available for you to get started</p>
-					<a href="https://github.com/turingaicloud/quickstart" target="_blank" class="btn btn-outline-dark">
-						Check on GitHub
-					</a>
-				</div>
-			</div>
-			<div class="col">
-				<div>
-					<h2>Call for Pioneers</h2>
-					<p>Early-adopter Application is now open! Join now and boost your AI research</p>
-					<a href="https://forms.gle/eHzg8mqMHmEziU7r8" class="btn btn-primary">
-						Apply Now
-					</a>
-				</div>
-			</div>
-			<div class="col">
-				<div>
-					<h2>Whitepaper</h2>
-					<p>Learn about our IaaS architecture tailored for machine learning tasks</p>
-					<a href="https://arxiv.org/abs/2110.01556"  target="_blank" class="btn btn-outline-dark">
-						Read the Whitepaper
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>  
+    <div class="section publications">
+        <div class="container">
+            <div class="section-title">Research publications</div>
+            <div class="publication-entry">
+                <div class="item-title">TACC: A Full-stack Cloud Computing Infrastructure for Machine Learning Tasks
+                </div>
+                <div class="item-author">Kaiqiang Xu, Xinchen Wan, Hao Wang, Zhenghang Ren, Xudong Liao, Decang Sun, Chaoliang Zeng, Kai Chen</div>
+            </div>
+            <div class="publication-entry">
+                <div class="item-title">Towards Domain-Specific Network Transport for Distributed DNN Training (NSDI '24)
+                </div>
+                <div class="item-author">Hao Wang, Han Tian, Jingrong Chen, Xinchen Wan, Jiacheng Xia, Gaoxiong Zeng, Wei Bai, Junchen Jiang, Yong Wang, Kai Chen</div>
+            </div>
+            <div class="publication-entry">
+                <p class="item-button"><a href="https://www.cse.ust.hk/~kaichen/publication.html" target="_blank" class="tacc-button button-secondary">View More Publications</a></p>
+            </div>
+            
+        </div>
+    </div>
 
+    <div class="section cluster" id="hkust">
+        <div class="container">
+            <h2 class="section-title">TACC Clusters at HKUST <span id="stats-date" class="is-size-6	"></span></h2>
+            <div class="columns is-align-items-center">
+                <div class="column is-half">
+                    <div class="columns is-multiline is-mobile">
+                        <div class="column is-6">
+                            <p class="text-large">2</p>
+                            <p class="text-small"">TACC-managed clusters</p>
+                        </div>
+                        <div class="column is-6">
+                            <div class="text-large" id="stats-user">397</div>
+                            <p class="text-small"">Active TACC users since 2021/05</p>
+                        </div>
+                        <div class="column is-6">
+                            <p class="text-large" id="stats-task" >24,303</p>
+                            <p class="text-small"">Task process on TACC clusters</p>
+                        </div>
+                        <div class="column is-6">
+                            <p class="text-large" id="stats-gpu">235,739</p>
+                            <p class="text-small"">GPU hours used for ML tasks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column text-center px-6">
+                    <canvas id="userChart" width="400" height="200"></canvas>
+                </div>
+            </div>  
+            <div class="columns is-align-items-center">
+                <div class="column">
+                    <div class="columns is-multiline is-tablet">
+                        <div class="column is-12">
+                            <div class="cards cards-main">
+                                <p class="item-title">Call for Pioneers</p>
+                                <p class="item-subtitle">Early-adopter Application is now open! Join now and boost your AI research</p>
+                                <p class="item-button"><a class="tacc-button" href="https://forms.gle/eHzg8mqMHmEziU7r8" target="_blank">Apply for free access to TACC's HKUST Cluster</a></p>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <a href="https://github.com/turingaicloud/quickstart" target="_blank">
+                                <div class="cards">
+                                    <p class="item-title">
+                                        Docs and Turtorials &nbsp;&nbsp;
+                                        <svg style="vertical-align:middle" focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 32 32" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6z"></path></svg>
+                                    </p>
+                                    <p class="item-subtitle">Comprehensive docs and examples available for you to get started</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-6">
+                            <a href="mailto:tacc-contact@lists.ust.hk">
+                                <div class="cards">
+                                    <p class="item-title">
+                                        Contact TACC Team &nbsp;&nbsp;
+                                        <svg style="vertical-align:middle" focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 32 32" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6z"></path></svg>
+                                    </p>
+                                    <p class="item-subtitle">Get in touch with TACC operation team at HKUST to report issues or give feedbacks</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column p-6 description">
+                    <p><strong>TACC at HKUST</strong></p>
+                    <p>At HKUST, TACC manages clusters of over 160 GPU cards for research and education in machine learning with open access to the research community.</p>
+                    <p>Compared to the beginning of 2023, TACC in 2023 has seen an 84% increase in active users to 397 and a 115% rise in processed ML tasks to 24,303. </p>
+                    <p>TACC supports over 40 research projects and has seen so far 22 citations at top conferences including SIGMOD, KDD, CVPR, and UbiComp.</p>
+                </div>
+            </div>
 
-	<div class="section section-content section-testimonials">
-		<div class="row title">
-			<div class="col">
-				<div class="title-text">Highlights on Turing AI Computing Cloud</div>
-				<div style="font-size:1rem;font-weight: normal;font-style: italic;">data collected in <span id="stats-date">(loading)</span></div>
-			</div>
-		</div>
-		<div class="row numbers g-4 pt-5 pb-3 row-cols-1 row-cols-sm-3">
-			<div class="col">
-				<div>
-					<div class="figure"><span id="stats-user">(loading)</span> users</div>
-					<p>joined TACC since 24/05/2021</p>
-				</div>
-			</div>
-			<div class="col">
-				<div>
-					<div class="figure"><span id="stats-task">(loading)</span> tasks</div>
-					<p>submitted to TACC for processing</p>
-				</div>
-			</div>
-			<div class="col">
-				<div>
-					<div class="figure"><span id="stats-gpu">(loading)</span> GPU hours</div>
-					<p>used for machine learning tasks</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row g-4 pb-5">
-			<div class="col px-4 text-center">
-				<canvas id="userChart" width="400" height="200"></canvas>
-			</div>
-			<div class="col px-4 text-center">
-				<canvas id="taskChart" width="400" height="200"></canvas>
-			</div>
-			<script>
-				function createOption() {
-					return {
-		            type: 'line',
-		            options: {
-		                plugins: {
-		                    legend: {
-		                        display: false
-		                    },
-		                    title: {
-		                        display: true,
-		                        text: 'Chart Title', // Replace with your title
-		                        font: {
-		                            size: 14
-		                        }
-		                    }
-		                },
-		                scales: {
-		                    x: {
-		                        type: 'time',
-		                        time: {
-		                            unit: 'month',
-		                            tooltipFormat: 'yyyy-MM',
-		                            displayFormats: {
-		                                month: 'yy-MM'
-		                            }
-		                        },
-		                        grid: {
-		                            display: true,
-		                            drawBorder: true,
-		                            drawOnChartArea: true,
-		                            color: function(context) {
-		                                if (context.tick && context.tick.label.endsWith('-01')) {
-		                                    return '#999';
-		                                } else {
-		                                    return '#fff'; // Light gray for other grid lines
-		                                }
-		                            }
-		                        }
-		                    }
-		                },
-		                interaction: {
-		                    mode: 'nearest',
-		                    intersect: false,
-		                    axis: 'x'
-		                }
-		            }
-		        };
-				}
-
-		    function setupChart(data) {
-		        var dates = data.map(item => item.Date);
-		        var userNumbers = data.map(item => item.Users);
-		        var taskNumbers = data.map(item => item.Tasks);
-
-						var Color1 = '#452d69'; // Nvidia Green
-		        var Color2 = '#76b900';  // Nvidia Dark
-
-		        var ctxUser = document.getElementById('userChart').getContext('2d');
-		        var userOptions = createOption();
-		        userOptions.data = {
-		            labels: dates,
-		            datasets: [{
-		                label: 'User Growth',
-		                data: userNumbers,
-		                backgroundColor: Color1,
-		                borderColor: Color1,
-		                borderWidth: 2,
-		                pointRadius: 0 // Removes the dots
-		            }]
-		        };
-		        userOptions.options.plugins.title.text = 'User Growth Over Time';
-		        new Chart(ctxUser, userOptions);
+        </div>
+    </div>
 
 
+    <div class="section join" id="collab">
+        <div class="container">
+            <div class="columns is-align-items-center">
+                <div class="column is-half">
+                    <p class="section-title">By researchers, for researchers</p> 
+                    <p class="section-subtitle">
+                    Embrace the TACC solution in your cluster, an advanced approach to cluster management and task handling that enhances efficiency and reliability. 
+                    <br>
+                    Our research-backed solution includes comprehensive hardware monitoring, streamlined maintenance, and efficient job scheduling and execution. 
+                    </p>
 
-		        var ctxTask = document.getElementById('taskChart').getContext('2d');
-		        var taskOptions = createOption();
-		        taskOptions.data = {
-		            labels: dates,
-		            datasets: [{
-		                label: 'Task Growth',
-		                data: taskNumbers,
-		                backgroundColor: Color2,
-		                borderColor: Color2,
-		                borderWidth: 2,
-		                pointRadius: 0 // Removes the dots
-		            }]
-		        };
-		        taskOptions.options.plugins.title.text = 'Task Growth Over Time';
-		        new Chart(ctxTask, taskOptions);
+                </div>
+                <div class="column is-half picture"></div>
+            </div>       
+            <div class="columns is-multiline is-desktop">
+                <div class="column">
+                    <div class="cards cards-main">
+                        <p class="item-title">High <span class="text-colored">Stability</span></p>
+                        <p class="item-subtitle">TACC enhances operational reliability by providing continuous 24/7 hardware monitoring, robust containerization options, and equitable and efficient job scheduling mechanisms.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="cards cards-main">
+                        <p class="item-title">Enhanced <span class="text-colored">Usability</span></p>
+                        <p class="item-subtitle">Task provisioning and management are effortless with TACC. Users can submit and monitor tasks via command line, web UI, or API, making the system highly accessible.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="cards cards-main">
+                        <p class="item-title">Maximized <span class="text-colored">Performance</span></p>
+                        <p class="item-subtitle">TACC incorporates state-of-the-art ML systems and network technologies from the academic sector, tailored for maximizing performance and scalability in AI applications.</p>
+                    </div>
+                </div>
+            </div>     
+            <div class="columns is-multiline is-desktop">
+                <div class="column">
+                    <a href="mailto:tacc-contact@lists.ust.hk?subject=Deploying TACC in my own cluster">
+                        <div class="tacc-button button-large">
+                            Deploy TACC in Your Own Cluster 
+                            <svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 16 16" role="img" class="cds--btn__icon" xmlns="http://www.w3.org/2000/svg"><path d="M9.3 3.7L13.1 7.5 1 7.5 1 8.5 13.1 8.5 9.3 12.3 10 13 15 8 10 3z"></path></svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="https://arxiv.org/abs/2110.01556">
+                        <div class="tacc-button button-large">
+                            Read Our Experience Paper
+                            <svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 16 16" role="img" class="cds--btn__icon" xmlns="http://www.w3.org/2000/svg"><path d="M9.3 3.7L13.1 7.5 1 7.5 1 8.5 13.1 8.5 9.3 12.3 10 13 15 8 10 3z"></path></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>     
+        </div>
+    </div>
 
-		        //update the number figure
-		        var lastEntry = data[data.length - 1];
-        		var user = parseInt(lastEntry.Users);
-		        var task = parseInt(lastEntry.Tasks);
-		        var gpu = task * 9.7;
+    <div class="section footer">
+        <div class="container">
+            <div class="columns is-align-items-center">
+                <div class="logo column is-narrow"><img src="assets/tacc-logo-white.png" /></div>
+                <div class="column item is-narrow"><a href="mailto:tacc-contact@lists.ust.hk">Contact Us</a></div>
+                <div class="column item is-narrow"><a href="https://ising.cse.ust.hk" target="_blank">About iSING Lab</a></div>
+                <div class="column item is-narrow"><a href="https://tacc.ust.hk/v1/trs.html" target="_blank">Funded by RGC Theme-based Research</a></div>
+                <div class="column item is-narrow"><a href="https://tacc.ust.hk/v1/tos.html" target="_blank">Term of Service (TACC @HKUST)</a></div>
+            </div>
+            
+        </div>
+    </div>
 
-        		const lastDate = new Date(lastEntry.Date); 
-        		const formattedDate = lastDate.toLocaleString('en-US', { month: 'long', year: 'numeric'});
+    <script>
+        function createOption() {
+            return {
+            type: 'line',
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart Title', // Replace with your title
+                        font: {
+                            size: 14,
+                            family: 'IBM Plex Sans'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'month',
+                            tooltipFormat: 'yyyy-MM',
+                            displayFormats: {
+                                month: 'yy-MM'
+                            }
+                        },
+                        grid: {
+                            display: true,
+                            drawBorder: true,
+                            drawOnChartArea: true,
+                            color: function(context) {
+                                if (context.tick && context.tick.label.endsWith('-01')) {
+                                    return '#999';
+                                } else {
+                                    return '#fff'; // Light gray for other grid lines
+                                }
+                            }
+                        }
+                    },
+                    B: {
+                        type: 'linear',
+                        position: 'right',
+                        grid: {display: false},
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    intersect: false,
+                    axis: 'x'
+                }
+            }
+        };
+        }
 
-		        document.getElementById("stats-date").innerHTML = formattedDate;
-		        document.getElementById("stats-task").innerHTML = task.toLocaleString('en-US', {minimumFractionDigits: 0})
-		        document.getElementById("stats-user").innerHTML = user.toLocaleString('en-US', {minimumFractionDigits: 0})
-		        document.getElementById("stats-gpu").innerHTML = gpu.toLocaleString('en-US', {minimumFractionDigits: 0})
-		    }
+        function setupChart(data) {
+            var dates = data.map(item => item.Date);
+            var userNumbers = data.map(item => item.Users);
+            var taskNumbers = data.map(item => item.Tasks);
 
-		    fetch('./stats.csv')
-		        .then(response => response.text())
-		        .then(csvText => Papa.parse(csvText, { header: true, skipEmptyLines:true }))
-		        .then(data => setupChart(data.data));
-		</script>
+            var Color1 = '#452d69'; // Nvidia Green
+            var Color2 = '#76b900';  // Nvidia Dark
 
-		</div>
+            var ctxUser = document.getElementById('userChart').getContext('2d');
+            var userOptions = createOption();
+            userOptions.data = {
+                labels: dates,
+                datasets: [{
+                    label: 'User Growth',
+                    yAxisID: 'A',
+                    data: userNumbers,
+                    backgroundColor: Color1,
+                    borderColor: Color1,
+                    borderWidth: 2,
+                    pointRadius: 0 // Removes the dots
+                }, {
+                    label: 'Task Growth',
+                    yAxisID: 'B',
+                    data: taskNumbers,
+                    backgroundColor: Color2,
+                    borderColor: Color2,
+                    borderWidth: 2,
+                    pointRadius: 0 // Removes the dots
+                }]
+            };
+            userOptions.options.plugins.title.text = 'User and Task Growth Over Time';
+            new Chart(ctxUser, userOptions);
 
-		<div class="row">
-			<div class="col">
-				<div class="title-quote">From TACC Users</div>
-			</div>
-		</div>
-		<div class="row content">   
-			<div class="col-sm-3 area">
-				<div class="author-name">
-					<span>H. He</span>
-				</div>				
-				<div class="description">
-					<span>PhD Student, HKUST</span>
-				</div>
-			</div>
-			<div class="col-sm-9">
-				<div class="comment">For our group, TACC is one of the simplest and easiest clusters to use for 3d image generation experiments. It helps us to run large tasks with multi-GPU support without worrying about job schedules/environment migration, and it also has large disks to host our benchmarks for fast experiment setups.</div> 
-				<div class="sign">
-					<span class="hint">Project: </span> 
-					NeRF rendering
-				</div> 
-			</div>  
-		</div>	
-		<div class="row content">   
-			<div class="col-sm-3 area">
-				<div class="author-name">
-					<span>K. Xu</span>
-				</div>				
-				<div class="description">
-					<span>PhD Student, HKUST</span>
-				</div>
-			</div>
-			<div class="col-sm-9">
-				<div class="comment">We are building a distributed system that can efficiently train Graph Nueral Networks with near-linear scalability over billion-edge graphs. TACC provides us with a scalable and flexible setting where we can run small and large-scale experiments based on our demand.</div> 
-				<div class="sign">
-					<span class="hint">Project: </span> 
-					Scalable and Efficient GNN Training for Large Graphs
-				</div> 
-			</div>  
-		</div>
-	</div>
+            //update the number figure
+            var lastEntry = data[data.length - 1];
+            var user = parseInt(lastEntry.Users);
+            var task = parseInt(lastEntry.Tasks);
+            var gpu = task * 9.7;
 
-	<div class="section section-content section-term">
-		<div class="row title">
-			<div class="col">	
-				<div class="title-text">TACC Term of Service</div>
-			</div>
-		</div>
-		<div class="row content">
-			<div class="col-sm-8 col-12">	
-				<div class="link">All users of TACC should comply with the rules set forth in the <a href="/tos.html" style="white-space: nowrap;">Term of Service</a>.<br> Contact us at <a href="mailto:tacc-contact@lists.ust.hk" style="white-space: nowrap;">tacc-contact@lists.ust.hk</a></div>
-			</div>
-		</div>
-	</div>
+            const lastDate = new Date(lastEntry.Date); 
+            const formattedDate = lastDate.toLocaleString('en-US', { month: 'long', year: 'numeric'});
 
-	<div class="section section-content section-footer">
-		<div class="row title">
-			<div class="col">
-				<div class="trs">RGC Theme-based Research Scheme</div>
-				<div class="copyright">© Turing AI Computing Cloud 2021</div>
-			</div>
-		</div>
-	</div>
+            document.getElementById("stats-date").innerHTML = "Data as of "+formattedDate;
+            document.getElementById("stats-task").innerHTML = task.toLocaleString('en-US', {minimumFractionDigits: 0})
+            document.getElementById("stats-user").innerHTML = user.toLocaleString('en-US', {minimumFractionDigits: 0})
+            document.getElementById("stats-gpu").innerHTML = gpu.toLocaleString('en-US', {minimumFractionDigits: 0})
+        }
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163554440-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-163554440-4');
-</script>
-
-
-
-
-</div> 
+        fetch('https://tacc.ust.hk/stats.csv')
+            .then(response => response.text())
+            .then(csvText => Papa.parse(csvText, { header: true, skipEmptyLines:true }))
+            .then(data => setupChart(data.data));
+    </script>
 </body>
 </html>

@@ -1,0 +1,282 @@
+body, html{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    color: black;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100vh;
+}
+a {
+    color: black;
+}
+.text-colored {
+    background-image: linear-gradient(90deg,#9b5cff 0,#ee5396);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-underlined {
+    border-bottom: 1px solid black;
+}
+.tacc-button {
+    font-size: 0.8rem;
+    line-height: 2rem;
+    background-color: #452d69;
+    padding: 8px 24px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #452d69;
+    cursor: pointer;
+}
+.tacc-button:hover {
+    background-color: white!important;
+    border: 1px solid black!important;
+    color: black!important;
+}
+.button-secondary {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+.section {
+    scroll-margin-top: 65px;
+}
+.section .section-title {
+    font-size: 2.6rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 1408px){
+    body, html {
+        font-size: 14px;
+    }
+    .tacc-button {
+        font-size: .9rem;
+    }
+}
+
+
+.menubar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 99999;
+    top: 0;
+    background-color: white;
+}
+.menubar .logo {
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    height: 80px;
+}
+.menubar .logo img {
+    height: 36px;
+}
+@media screen and (max-width: 1024px){
+    .menubar .items {
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+    .menubar .logo {
+        margin-right: 0rem;
+        height: 60px;
+        padding-top: 18px;
+        padding-bottom: 0px;
+    }
+}
+.menubar .item {
+    font-weight: 400;
+    color: #525252;
+}
+.menubar a {
+    color: #525252;
+}
+.menubar a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px 0px;
+    height: 500px;
+    background-image:linear-gradient(to right, rgba(244, 244, 244, 1) 0 50%, rgba(244, 244, 244, 0) 70%), url("bg.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 80%;
+}
+.banner .banner-text {
+    text-align: right;
+    font-size: 3rem;
+    vertical-align: middle;
+    color: black;
+    font-weight: 300;
+    padding-right: 40px;
+}
+.banner .banner-text .banner-subtitle {
+    margin-top: 1.6rem;
+    font-size: 1.2rem;
+}
+.banner .button-secondary {
+    background-color: #f4f4f4;
+}
+
+
+@media screen and (max-width: 1024px){
+    .banner {
+        background-size: 100% auto;
+        background-position: 20%;
+        background-image: linear-gradient(rgba(244, 244, 244, 0.8), rgba(244, 244, 244, 0.8)), url("bg.png");
+        height: 500px;
+    }
+    .banner .banner-text {
+        text-align: center;
+        font-size: 2.4rem;
+        padding: 0px 20px;
+        font-weight: 400;
+    }
+    .overview .spacing {
+        display: none;
+    }
+}
+
+
+
+.overview {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+@media screen and (max-width: 1215px){
+    .overview .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+
+.research img {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.research .item-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 20px 0px;
+}
+
+
+.publications .publication-entry {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+.publications .publication-entry .item-author {
+    color:#525252;
+    margin-top: 6px;
+}
+
+
+.cluster {
+    background-color: #f4f4f4;
+}
+.cluster .text-large {
+    font-size: 3rem;
+    background-image: linear-gradient(90deg,#9b5cff 0,#ee5396);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cluster .description {
+    font-size: 1.1rem;
+    background-image: linear-gradient(#f4f4f4cc, #f4f4f4cc), url(redbird.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 80%;
+}
+.cluster .description p {
+    margin-top: 10px;
+}
+.cluster .description p strong{
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+.cluster .cards {
+    min-height: 8.8rem;
+    background-color: #e8e8e8;
+    padding: 1rem;
+}
+.cluster a:hover .cards{
+    background-color: #d8d8d8;
+}
+.cluster .cards-main {
+    background-color: #452d6913;
+}
+.cluster .cards .item-title{
+    font-weight: bold;
+}
+.cluster .cards .item-subtitle {
+    margin-top: 10px;
+    color: #525252;
+}
+.cluster .cards .item-button {
+    margin-top: 1rem;
+}
+.cluster .cards svg {
+    vertical-align:middle
+    position: relative;
+    top: -1px;
+}
+
+
+.join .section-subtitle {
+    line-height: 1.8rem;
+}
+
+.join .picture {
+    background-image:linear-gradient(to right, rgba(255, 255, 255, 1) 0 10%, rgba(255, 255, 255, 0) 30%), url("dgx.png");   
+    background-size: auto 85%;
+    background-position: 20%;
+    background-repeat: no-repeat;
+    height: 260px;
+}
+
+.join .cards{
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+.join .item-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.join .tacc-button svg {
+    vertical-align:middle;
+    position: relative;
+    top: -1px;
+}
+.join .tacc-button {
+    font-weight: 400;
+    font-size: 1rem;
+    border: 1px solid #343a3f;
+    color: white;
+    background-color: #343a3f;
+}
+
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #e0e0e0;
+    background-color: #21272a;
+}
+.footer .logo img{
+    width: 140px;
+}
+.footer .item {
+    font-size: 0.8rem;
+    color: white;
+}
+.footer .item a {
+    color: white;
+}
