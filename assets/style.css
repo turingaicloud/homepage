@@ -46,9 +46,6 @@ a {
     margin-bottom: 20px;
 }
 @media screen and (max-width: 1408px){
-    body, html {
-        font-size: 14px;
-    }
     .tacc-button {
         font-size: .9rem;
     }
@@ -129,7 +126,16 @@ a {
     background-color: #f4f4f4;
 }
 
-
+@media screen and (max-width: 1408px){
+    .banner .banner-text {
+        font-size: 2.8rem;
+    }
+}
+@media screen and (max-width: 1215px){
+    .banner .banner-text {
+        font-size: 2.3rem;
+    }
+}
 @media screen and (max-width: 1024px){
     .banner {
         background-size: 100% auto;
@@ -156,7 +162,7 @@ a {
 }
 @media screen and (max-width: 1215px){
     .overview .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -231,7 +237,12 @@ a {
     position: relative;
     top: -1px;
 }
-
+.cluster .hkust-logo {
+    vertical-align:middle;
+    position: relative;
+    top: -5px;
+    height: 2.6rem;
+}
 
 .join .section-subtitle {
     line-height: 1.8rem;
