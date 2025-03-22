@@ -52,6 +52,12 @@
             "position": "MPhil student"
         },
         {
+            "photo_url": "./members/hantian.jpg",
+            "name": "Han Tian",
+            "position": "Professor",
+            "link": "https://tianhan4.github.io/"
+        },
+        {
             "photo_url": "./members/kai.jpg",
             "name": "Prof. Kai Chen",
             "position": "Professor",
