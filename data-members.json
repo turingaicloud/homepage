@@ -12,31 +12,6 @@
             "position": "PhD student"
         },
         {
-            "photo_url": "./members/wanghao.jpeg",
-            "name": "Hao Wang",
-            "position": "PhD student",
-            "link": "https://whwh1996.github.io/"
-        },
-
-        {
-            "photo_url": "./members/zhenghang.jpg",
-            "name": "Zhenghang Ren",
-            "position": "PhD student",
-            "link": "https://home.cse.ust.hk/~zrenak/"
-        },
-        {
-            "photo_url": "./members/xinchen.jpg",
-            "name": "Xinchen Wan",
-            "position": "PhD student",
-            "link": "https://xcwanandy.github.io"
-        },
-        {
-            "photo_url": "./members/xudong.jpg",
-            "name": "Xudong Liao",
-            "position": "PhD student",
-            "link": "https://xudoangliao.github.io/"
-        },
-        {
             "photo_url": "./members/yuxuanli.jpeg",
             "name": "Yuxuan Li",
             "position": "PhD student"
@@ -50,6 +25,23 @@
             "photo_url": "./members/feiyuan.png",
             "name": "Feiyuan Zhang",
             "position": "MPhil student"
+        },
+                {
+            "photo_url": "./members/wanghao.jpeg",
+            "name": "Hao Wang",
+            "position": "PhD student",
+            "link": "https://whwh1996.github.io/"
+        },
+        {
+            "photo_url": "./members/zhenghang.jpg",
+            "name": "Zhenghang Ren",
+            "position": "PhD student",
+            "link": "https://home.cse.ust.hk/~zrenak/"
+        },
+        {
+            "photo_url": "./members/junxue.png",
+            "name": "Prof. Junxue Zhang",
+            "link": "https://snowzjx.me/"
         },
         {
             "photo_url": "./members/han.png",
